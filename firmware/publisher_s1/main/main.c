@@ -1,13 +1,14 @@
 /*
- * Etapa 2 — Publicador MQTT via Wi-Fi e TCP
+ * PrioMQTT — Publicador ESP32 com ciclo de RTT
+ * Etapa 2: Baseline TCP com Mosquitto
  * Disciplina: Sistemas de Tempo Real — UFBA
  *
- * O ESP32 conecta no Wi-Fi, conecta no broker Mosquitto
- * via TCP e publica uma mensagem por segundo no tópico
- * sensor/s1 com um timestamp e número de sequência.
- *
- * Isso replica o comportamento do publisher Python da
- * Etapa 1, agora em hardware real.
+ * Fluxo:
+ *   1. Conecta no Wi-Fi
+ *   2. Conecta no Mosquitto via TCP
+ *   3. Subscreve cmd/s1 para receber echo reply do controlador
+ *   4. Publica em sensor/s1 a cada 1 segundo
+ *   5. Ao receber echo, calcula RTT e loga se houve deadline miss
  */
 
 #include <stdio.h>
@@ -26,13 +27,15 @@
 /* -------------------------------------------------------
  * Configurações — ajuste para sua rede e PC
  * ------------------------------------------------------- */
-#define WIFI_SSID      "teste"           // nome da sua rede Wi-Fi
-#define WIFI_PASSWORD  "12345678"          // senha da rede
-#define BROKER_IP      "192.168.1.8"        // IP do seu PC
-#define BROKER_PORT    1883
-#define TOPIC_PUB      "sensor/s2"          // tópico de publicação
-#define NODE_ID        "s2"                 // identificador deste ESP32
-#define PUB_PERIOD_MS  1000                 // publica a cada 1 segundo
+#define WIFI_SSID        "teste"              ///< SSID
+#define WIFI_PASSWORD    "12345678"           ///< Senha
+#define BROKER_IP        "192.168.1.8"
+#define BROKER_PORT      1883
+#define TOPIC_PUB        "sensor/s1"
+#define TOPIC_CMD        "cmd/s1"
+#define NODE_ID          "s1"
+#define PUB_PERIOD_MS    1000
+#define DEADLINE_US      50000   /* 50 ms em microssegundos */
 
 static const char *TAG = "PRIOMQTT";
 
@@ -45,6 +48,22 @@ static EventGroupHandle_t s_event_group;
 
 static esp_mqtt_client_handle_t mqtt_client = NULL;
 
+/*
+ * Timestamp do último publish em microssegundos.
+ * Gravado imediatamente antes de chamar esp_mqtt_client_publish
+ * para minimizar o erro de medição do RTT.
+ * Acesso protegido por ser escrito só na pub_task e lido
+ * só no handler de MQTT_EVENT_DATA, que roda na mesma task
+ * interna do cliente MQTT.
+ */
+static volatile int64_t ts_ultimo_pub = 0;
+
+/* Contadores para resumo final */
+static uint32_t total_pub   = 0;
+static uint32_t total_miss  = 0;
+static int64_t  rtt_soma_us = 0;
+static int64_t  rtt_max_us  = 0;
+
 /* -------------------------------------------------------
  * Handlers de eventos Wi-Fi
  * ------------------------------------------------------- */
@@ -54,14 +73,15 @@ static void wifi_event_handler(void *arg, esp_event_base_t base,
     if (base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
 
-    } else if (base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+    } else if (base == WIFI_EVENT &&
+               event_id == WIFI_EVENT_STA_DISCONNECTED) {
         ESP_LOGW(TAG, "Wi-Fi desconectado. Reconectando...");
         xEventGroupClearBits(s_event_group, WIFI_CONNECTED_BIT);
         esp_wifi_connect();
 
     } else if (base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
-        ip_event_got_ip_t *event = (ip_event_got_ip_t *) event_data;
-        ESP_LOGI(TAG, "IP obtido: " IPSTR, IP2STR(&event->ip_info.ip));
+        ip_event_got_ip_t *ev = (ip_event_got_ip_t *) event_data;
+        ESP_LOGI(TAG, "IP obtido: " IPSTR, IP2STR(&ev->ip_info.ip));
         xEventGroupSetBits(s_event_group, WIFI_CONNECTED_BIT);
     }
 }
@@ -80,7 +100,6 @@ static void wifi_init(void)
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
-    // registra handlers para eventos Wi-Fi e IP
     ESP_ERROR_CHECK(esp_event_handler_register(
         WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(
@@ -96,7 +115,7 @@ static void wifi_init(void)
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
 
-    ESP_LOGI(TAG, "Aguardando conexão Wi-Fi...");
+    ESP_LOGI(TAG, "Aguardando conexao Wi-Fi...");
     xEventGroupWaitBits(s_event_group, WIFI_CONNECTED_BIT,
                         pdFALSE, pdTRUE, portMAX_DELAY);
     ESP_LOGI(TAG, "Wi-Fi conectado.");
@@ -108,12 +127,16 @@ static void wifi_init(void)
 static void mqtt_event_handler(void *arg, esp_event_base_t base,
                                int32_t event_id, void *event_data)
 {
-    esp_mqtt_event_handle_t event = (esp_mqtt_event_handle_t) event_data;
+    esp_mqtt_event_handle_t event =
+        (esp_mqtt_event_handle_t) event_data;
 
     switch ((esp_mqtt_event_id_t) event_id) {
 
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "Conectado ao broker MQTT.");
+        /* subscreve o topico de comando para receber echo reply */
+        esp_mqtt_client_subscribe(mqtt_client, TOPIC_CMD, 0);
+        ESP_LOGI(TAG, "Subscrito em %s", TOPIC_CMD);
         xEventGroupSetBits(s_event_group, MQTT_CONNECTED_BIT);
         break;
 
@@ -122,9 +145,51 @@ static void mqtt_event_handler(void *arg, esp_event_base_t base,
         xEventGroupClearBits(s_event_group, MQTT_CONNECTED_BIT);
         break;
 
-    case MQTT_EVENT_PUBLISHED:
-        // confirmação de que o broker recebeu (relevante para QoS > 0)
-        ESP_LOGD(TAG, "Mensagem publicada, msg_id=%d", event->msg_id);
+    case MQTT_EVENT_DATA:
+        /*
+         * Echo reply recebido do controlador.
+         *
+         * TD = esp_timer_get_time() agora
+         * TA = ts_ultimo_pub (gravado antes do publish)
+         *
+         * RTT bruto = TD - TA
+         *
+         * Nota: esse RTT inclui o tempo de processamento do
+         * controlador (TC - TB). Para descontar precisariamos
+         * dos timestamps do controlador no payload, o que sera
+         * implementado nas etapas seguintes com o broker Python.
+         * Por ora o RTT bruto e suficiente para validar o ciclo.
+         */
+        {
+            int64_t td     = esp_timer_get_time();
+            int64_t rtt_us = td - ts_ultimo_pub;
+
+            total_pub++;
+            rtt_soma_us += rtt_us;
+            if (rtt_us > rtt_max_us) rtt_max_us = rtt_us;
+
+            char topico[64] = {0};
+            int  tlen = event->topic_len < 63 ? event->topic_len : 63;
+            memcpy(topico, event->topic, tlen);
+
+            if (rtt_us > DEADLINE_US) {
+                total_miss++;
+                ESP_LOGW(TAG,
+                    "MISS | topic=%s rtt=%lld us (%.1f ms) "
+                    "misses=%lu/%lu",
+                    topico,
+                    (long long) rtt_us,
+                    rtt_us / 1000.0f,
+                    (unsigned long) total_miss,
+                    (unsigned long) total_pub);
+            } else {
+                ESP_LOGI(TAG,
+                    "RTT  | topic=%s rtt=%lld us (%.1f ms)",
+                    topico,
+                    (long long) rtt_us,
+                    rtt_us / 1000.0f);
+            }
+        }
         break;
 
     case MQTT_EVENT_ERROR:
@@ -137,7 +202,7 @@ static void mqtt_event_handler(void *arg, esp_event_base_t base,
 }
 
 /* -------------------------------------------------------
- * Inicialização do cliente MQTT
+ * Inicializacao do cliente MQTT
  * ------------------------------------------------------- */
 static void mqtt_init(void)
 {
@@ -148,54 +213,71 @@ static void mqtt_init(void)
     };
 
     mqtt_client = esp_mqtt_client_init(&mqtt_cfg);
-    esp_mqtt_client_register_event(mqtt_client, ESP_EVENT_ANY_ID,
-                                   mqtt_event_handler, NULL);
+    esp_mqtt_client_register_event(
+        mqtt_client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(mqtt_client);
 
-    ESP_LOGI(TAG, "Aguardando conexão MQTT...");
+    ESP_LOGI(TAG, "Aguardando conexao MQTT...");
     xEventGroupWaitBits(s_event_group, MQTT_CONNECTED_BIT,
                         pdFALSE, pdTRUE, portMAX_DELAY);
 }
 
 /* -------------------------------------------------------
- * Tarefa principal de publicação
+ * Tarefa de publicacao periodica
  *
- * FreeRTOS prio 5 — publicação periódica de 1 msg/s
- * O payload inclui:
- *   node : identificador do ESP32
- *   seq  : número de sequência (detecta perdas)
- *   ts   : timestamp em microssegundos (esp_timer_get_time)
- *          usado para calcular RTT no assinante
+ * Prioridade 5: acima das tarefas de sistema do Wi-Fi
+ * (prio 3) e do cliente MQTT (prio 5 interna), mas
+ * ajustavel conforme o experimento evoluir.
+ *
+ * Payload JSON:
+ *   node : identificador deste ESP32
+ *   seq  : numero de sequencia (detecta perdas)
+ *   ts   : timestamp em us desde o boot (esp_timer_get_time)
+ *   p    : prioridade (preparado para o PrioMQTT — por ora 1)
  * ------------------------------------------------------- */
 static void pub_task(void *pvParameters)
 {
-    char payload[128];
+    char     payload[192];
     uint32_t seq = 0;
 
     while (1) {
-        // aguarda MQTT estar conectado antes de publicar
         xEventGroupWaitBits(s_event_group, MQTT_CONNECTED_BIT,
                             pdFALSE, pdTRUE, portMAX_DELAY);
 
-        int64_t ts = esp_timer_get_time(); // microssegundos desde o boot
+        /*
+         * Grava TA imediatamente antes do publish.
+         * Qualquer codigo entre essa linha e o publish
+         * adiciona erro ao RTT medido.
+         */
+        ts_ultimo_pub = esp_timer_get_time();
 
         snprintf(payload, sizeof(payload),
-                 "{\"node\":\"%s\",\"seq\":%lu,\"ts\":%lld}",
-                 NODE_ID, (unsigned long) seq, ts);
+                 "{"
+                 "\"node\":\"%s\","
+                 "\"seq\":%lu,"
+                 "\"ts\":%lld,"
+                 "\"p\":1"
+                 "}",
+                 NODE_ID,
+                 (unsigned long) seq,
+                 (long long) ts_ultimo_pub);
 
         int msg_id = esp_mqtt_client_publish(
             mqtt_client,
             TOPIC_PUB,
             payload,
-            0,      // len=0: calcula automaticamente pelo strlen
-            0,      // QoS 0: sem confirmação (menor latência)
-            0       // retain=0
+            0,   /* len=0: usa strlen automaticamente */
+            0,   /* QoS 0: sem confirmacao, menor latencia */
+            0    /* retain=0 */
         );
 
         if (msg_id >= 0) {
-            ESP_LOGI(TAG, "PUB seq=%lu ts=%lld us", (unsigned long) seq, ts);
+            ESP_LOGI(TAG, "PUB | seq=%lu ts=%lld us",
+                     (unsigned long) seq,
+                     (long long) ts_ultimo_pub);
         } else {
-            ESP_LOGE(TAG, "Falha ao publicar seq=%lu", (unsigned long) seq);
+            ESP_LOGE(TAG, "Falha ao publicar seq=%lu",
+                     (unsigned long) seq);
         }
 
         seq++;
@@ -204,11 +286,36 @@ static void pub_task(void *pvParameters)
 }
 
 /* -------------------------------------------------------
+ * Tarefa de estatisticas periodicas
+ *
+ * Imprime resumo a cada 10 segundos para acompanhar
+ * o experimento sem precisar contar mensagens manualmente.
+ * ------------------------------------------------------- */
+static void stats_task(void *pvParameters)
+{
+    while (1) {
+        vTaskDelay(pdMS_TO_TICKS(10000));
+        if (total_pub > 0) {
+            float avg_ms  = (rtt_soma_us / total_pub) / 1000.0f;
+            float max_ms  = rtt_max_us / 1000.0f;
+            float miss_pct = (total_miss * 100.0f) / total_pub;
+            ESP_LOGI(TAG,
+                "--- STATS | pub=%lu miss=%lu (%.1f%%) "
+                "rtt_avg=%.2fms rtt_max=%.2fms ---",
+                (unsigned long) total_pub,
+                (unsigned long) total_miss,
+                miss_pct,
+                avg_ms,
+                max_ms);
+        }
+    }
+}
+
+/* -------------------------------------------------------
  * Ponto de entrada
  * ------------------------------------------------------- */
 void app_main(void)
 {
-    // NVS é necessário para o Wi-Fi armazenar configurações
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES ||
         ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -217,14 +324,15 @@ void app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    ESP_LOGI(TAG, "=== PrioMQTT Publisher — Etapa 2 ===");
+    ESP_LOGI(TAG, "=== PrioMQTT Publisher | node=%s ===", NODE_ID);
+    ESP_LOGI(TAG, "Broker: %s:%d", BROKER_IP, BROKER_PORT);
+    ESP_LOGI(TAG, "Topico pub: %s | cmd: %s", TOPIC_PUB, TOPIC_CMD);
+    ESP_LOGI(TAG, "Deadline: %d us (%d ms)",
+             DEADLINE_US, DEADLINE_US / 1000);
 
     wifi_init();
     mqtt_init();
 
-    // cria a tarefa de publicação com prioridade 5
-    // (acima das tarefas de sistema, abaixo de tarefas críticas)
-    xTaskCreate(pub_task, "pub_task", 4096, NULL, 5, NULL);
-
-    // app_main pode retornar — as tarefas FreeRTOS continuam rodando
+    xTaskCreate(pub_task,   "pub_task",   4096, NULL, 5, NULL);
+    xTaskCreate(stats_task, "stats_task", 2048, NULL, 2, NULL);
 }
