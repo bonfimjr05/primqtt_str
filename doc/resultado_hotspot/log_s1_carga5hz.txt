@@ -1,0 +1,914 @@
+Executing action: monitor
+Running idf_monitor in directory /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s3
+Executing "/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python /home/paulo/esp/v5.1.5/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s3/build/publisher_s3.elf -m '/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python' '/home/paulo/esp/v5.1.5/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB1'"...
+[0;31mE (45870) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (45870) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (45870) mqtt_client: Error transport connect[0m
+[0;31mE (45870) PRIOMQTT_S1: Erro MQTT.[0m
+[0;33mW (45880) PRIOMQTT_S1: Desconectado do broker MQTT.[0m
+[0;32mI (55430) wifi:state: run -> init (1a0)[0m
+[0;32mI (55440) wifi:pm stop, total sleep time: 38230088 us / 45615576 us[0m
+
+[0;32mI (55440) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (55440) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (55440) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (55460) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (55460) wifi:state: init -> auth (b0)[0m
+[0;32mI (55520) wifi:state: auth -> assoc (0)[0m
+[0;32mI (55540) wifi:state: assoc -> run (10)[0m
+[0;32mI (55740) wifi:state: run -> init (3a0)[0m
+[0;32mI (55750) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (55750) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (58160) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (60580) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;31mE (60880) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (60880) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (60880) mqtt_client: Error transport connect[0m
+[0;31mE (60890) PRIOMQTT_S1: Erro MQTT.[0m
+[0;33mW (60890) PRIOMQTT_S1: Desconectado do broker MQTT.[0m
+[0;33mW (62990) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (63010) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (63010) wifi:state: init -> auth (b0)[0m
+[0;32mI (63040) wifi:state: auth -> assoc (0)[0m
+[0;32mI (63110) wifi:state: assoc -> run (10)[0m
+[0;32mI (63160) wifi:connected with teste, aid = 4, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (63160) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (63160) wifi:pm start, type: 1[0m
+
+[0;32mI (63160) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (63210) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (63220) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (63230) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:0, winSize:64[0m
+[0;32mI (64170) esp_netif_handlers: sta ip: 10.141.135.50, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (64170) PRIOMQTT_S1: IP obtido: 10.141.135.50[0m
+[0;32mI (71370) PRIOMQTT_S1: Conectado ao broker MQTT.[0m
+[0;32mI (71380) PRIOMQTT_S1: Subscrito em cmd/s1[0m
+[0;32mI (71380) main_task: Returned from app_main()[0m
+[0;32mI (71380) PRIOMQTT_S1: PUB | seq=0 ts=70955933 us[0m
+[0;32mI (71400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26360 us (26.4 ms)[0m
+[0;32mI (72380) PRIOMQTT_S1: PUB | seq=1 ts=71953652 us[0m
+[0;32mI (72400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24779 us (24.8 ms)[0m
+[0;32mI (73380) PRIOMQTT_S1: PUB | seq=2 ts=72953652 us[0m
+[0;33mW (73460) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=87354 us (87.4 ms) misses=1/3[0m
+[0;32mI (74380) PRIOMQTT_S1: PUB | seq=3 ts=73953652 us[0m
+[0;32mI (74420) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=44208 us (44.2 ms)[0m
+[0;32mI (75380) PRIOMQTT_S1: PUB | seq=4 ts=74953652 us[0m
+[0;33mW (75490) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=111324 us (111.3 ms) misses=2/5[0m
+[0;32mI (76380) PRIOMQTT_S1: PUB | seq=5 ts=75953652 us[0m
+[0;33mW (76640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=262292 us (262.3 ms) misses=3/6[0m
+[0;32mI (77380) PRIOMQTT_S1: PUB | seq=6 ts=76953652 us[0m
+[0;32mI (77400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24996 us (25.0 ms)[0m
+[0;32mI (78380) PRIOMQTT_S1: PUB | seq=7 ts=77953652 us[0m
+[0;32mI (78400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24490 us (24.5 ms)[0m
+[0;32mI (79380) PRIOMQTT_S1: PUB | seq=8 ts=78953652 us[0m
+[0;33mW (79710) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=337620 us (337.6 ms) misses=4/9[0m
+[0;32mI (80380) PRIOMQTT_S1: PUB | seq=9 ts=79953652 us[0m
+[0;32mI (80400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27361 us (27.4 ms)[0m
+[0;32mI (81380) PRIOMQTT_S1: PUB | seq=10 ts=80953653 us[0m
+[0;32mI (81380) PRIOMQTT_S1: --- STATS S1 | pub=10 miss=4 (40.0%) rtt_avg=97.08ms rtt_max=337.62ms ---[0m
+[0;33mW (81450) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=71664 us (71.7 ms) misses=5/11[0m
+[0;32mI (82380) PRIOMQTT_S1: PUB | seq=11 ts=81953652 us[0m
+[0;33mW (82430) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=57131 us (57.1 ms) misses=6/12[0m
+[0;32mI (83380) PRIOMQTT_S1: PUB | seq=12 ts=82953652 us[0m
+[0;33mW (83600) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=225539 us (225.5 ms) misses=7/13[0m
+[0;32mI (84380) PRIOMQTT_S1: PUB | seq=13 ts=83953652 us[0m
+[0;33mW (84650) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=273654 us (273.7 ms) misses=8/14[0m
+[0;32mI (85380) PRIOMQTT_S1: PUB | seq=14 ts=84953652 us[0m
+[0;32mI (85400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24376 us (24.4 ms)[0m
+[0;32mI (86380) PRIOMQTT_S1: PUB | seq=15 ts=85953652 us[0m
+[0;33mW (86590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=218983 us (219.0 ms) misses=9/16[0m
+[0;32mI (87380) PRIOMQTT_S1: PUB | seq=16 ts=86953652 us[0m
+[0;32mI (87410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30693 us (30.7 ms)[0m
+[0;32mI (88380) PRIOMQTT_S1: PUB | seq=17 ts=87953652 us[0m
+[0;32mI (88400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27326 us (27.3 ms)[0m
+[0;32mI (89380) PRIOMQTT_S1: PUB | seq=18 ts=88953652 us[0m
+[0;32mI (89410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=36350 us (36.3 ms)[0m
+[0;32mI (90380) PRIOMQTT_S1: PUB | seq=19 ts=89953652 us[0m
+[0;32mI (90400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24628 us (24.6 ms)[0m
+[0;32mI (91380) PRIOMQTT_S1: PUB | seq=20 ts=90953884 us[0m
+[0;32mI (91380) PRIOMQTT_S1: --- STATS S1 | pub=20 miss=9 (45.0%) rtt_avg=98.06ms rtt_max=337.62ms ---[0m
+[0;33mW (91590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=211313 us (211.3 ms) misses=10/21[0m
+[0;32mI (92380) PRIOMQTT_S1: PUB | seq=21 ts=91953652 us[0m
+[0;33mW (92610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=237957 us (238.0 ms) misses=11/22[0m
+[0;32mI (93380) PRIOMQTT_S1: PUB | seq=22 ts=92953652 us[0m
+[0;33mW (93640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=260640 us (260.6 ms) misses=12/23[0m
+[0;32mI (94380) PRIOMQTT_S1: PUB | seq=23 ts=93953652 us[0m
+[0;32mI (94400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24024 us (24.0 ms)[0m
+[0;32mI (95380) PRIOMQTT_S1: PUB | seq=24 ts=94953652 us[0m
+[0;33mW (95890) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=512441 us (512.4 ms) misses=13/25[0m
+[0;32mI (96380) PRIOMQTT_S1: PUB | seq=25 ts=95953652 us[0m
+[0;33mW (96710) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=335886 us (335.9 ms) misses=14/26[0m
+[0;32mI (97380) PRIOMQTT_S1: PUB | seq=26 ts=96953652 us[0m
+[0;32mI (97400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24711 us (24.7 ms)[0m
+[0;32mI (98380) PRIOMQTT_S1: PUB | seq=27 ts=97953652 us[0m
+[0;33mW (98860) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=486501 us (486.5 ms) misses=15/28[0m
+[0;32mI (99380) PRIOMQTT_S1: PUB | seq=28 ts=98953652 us[0m
+[0;32mI (99400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26855 us (26.9 ms)[0m
+[0;32mI (100380) PRIOMQTT_S1: PUB | seq=29 ts=99953652 us[0m
+[0;32mI (100400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28276 us (28.3 ms)[0m
+[0;32mI (101380) PRIOMQTT_S1: PUB | seq=30 ts=100953653 us[0m
+[0;32mI (101380) PRIOMQTT_S1: --- STATS S1 | pub=30 miss=15 (50.0%) rtt_avg=136.99ms rtt_max=512.44ms ---[0m
+[0;33mW (101620) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=249042 us (249.0 ms) misses=16/31[0m
+[0;32mI (102380) PRIOMQTT_S1: PUB | seq=31 ts=101953652 us[0m
+[0;32mI (102400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28849 us (28.8 ms)[0m
+[0;32mI (103380) PRIOMQTT_S1: PUB | seq=32 ts=102953652 us[0m
+[0;33mW (103880) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=502563 us (502.6 ms) misses=17/33[0m
+[0;32mI (104380) PRIOMQTT_S1: PUB | seq=33 ts=103953652 us[0m
+[0;32mI (104410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30767 us (30.8 ms)[0m
+[0;32mI (105380) PRIOMQTT_S1: PUB | seq=34 ts=104953652 us[0m
+[0;32mI (105400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27944 us (27.9 ms)[0m
+[0;32mI (106380) PRIOMQTT_S1: PUB | seq=35 ts=105953652 us[0m
+[0;32mI (106410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=33552 us (33.6 ms)[0m
+[0;32mI (107380) PRIOMQTT_S1: PUB | seq=36 ts=106953652 us[0m
+[0;33mW (107440) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=66892 us (66.9 ms) misses=18/37[0m
+[0;32mI (108380) PRIOMQTT_S1: PUB | seq=37 ts=107953652 us[0m
+[0;33mW (108590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=212633 us (212.6 ms) misses=19/38[0m
+[0;32mI (109380) PRIOMQTT_S1: PUB | seq=38 ts=108953652 us[0m
+[0;33mW (109610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=236481 us (236.5 ms) misses=20/39[0m
+[0;32mI (110380) PRIOMQTT_S1: PUB | seq=39 ts=109953652 us[0m
+[0;33mW (110640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=260361 us (260.4 ms) misses=21/40[0m
+[0;32mI (111380) PRIOMQTT_S1: PUB | seq=40 ts=110953653 us[0m
+[0;32mI (111380) PRIOMQTT_S1: --- STATS S1 | pub=40 miss=21 (52.5%) rtt_avg=143.97ms rtt_max=512.44ms ---[0m
+[0;32mI (111400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27382 us (27.4 ms)[0m
+[0;32mI (112380) PRIOMQTT_S1: PUB | seq=41 ts=111953652 us[0m
+[0;32mI (112400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28916 us (28.9 ms)[0m
+[0;32mI (113380) PRIOMQTT_S1: PUB | seq=42 ts=112953652 us[0m
+[0;33mW (113910) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=535246 us (535.2 ms) misses=22/43[0m
+[0;32mI (114380) PRIOMQTT_S1: PUB | seq=43 ts=113953652 us[0m
+[0;32mI (114410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=34333 us (34.3 ms)[0m
+[0;32mI (115380) PRIOMQTT_S1: PUB | seq=44 ts=114953652 us[0m
+[0;33mW (115550) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=174136 us (174.1 ms) misses=23/45[0m
+[0;32mI (116380) PRIOMQTT_S1: PUB | seq=45 ts=115953652 us[0m
+[0;32mI (116410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35649 us (35.6 ms)[0m
+[0;32mI (117380) PRIOMQTT_S1: PUB | seq=46 ts=116953652 us[0m
+[0;33mW (117600) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=223377 us (223.4 ms) misses=24/47[0m
+[0;32mI (118380) PRIOMQTT_S1: PUB | seq=47 ts=117953652 us[0m
+[0;33mW (118630) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=249991 us (250.0 ms) misses=25/48[0m
+[0;32mI (119380) PRIOMQTT_S1: PUB | seq=48 ts=118953652 us[0m
+[0;32mI (119410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=32733 us (32.7 ms)[0m
+[0;32mI (120380) PRIOMQTT_S1: PUB | seq=49 ts=119953652 us[0m
+[0;33mW (120670) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=294311 us (294.3 ms) misses=26/50[0m
+[0;32mI (121380) PRIOMQTT_S1: PUB | seq=50 ts=120953653 us[0m
+[0;32mI (121380) PRIOMQTT_S1: --- STATS S1 | pub=50 miss=26 (52.0%) rtt_avg=147.90ms rtt_max=535.25ms ---[0m
+[0;32mI (121410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30595 us (30.6 ms)[0m
+[0;32mI (122380) PRIOMQTT_S1: PUB | seq=51 ts=121953652 us[0m
+[0;32mI (122410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=32604 us (32.6 ms)[0m
+[0;32mI (123380) PRIOMQTT_S1: PUB | seq=52 ts=122953652 us[0m
+[0;32mI (123400) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29348 us (29.3 ms)[0m
+[0;32mI (124380) PRIOMQTT_S1: PUB | seq=53 ts=123953652 us[0m
+[0;32mI (124410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35741 us (35.7 ms)[0m
+[0;32mI (125380) PRIOMQTT_S1: PUB | seq=54 ts=124953652 us[0m
+[0;33mW (125450) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=79896 us (79.9 ms) misses=27/55[0m
+[0;32mI (126380) PRIOMQTT_S1: PUB | seq=55 ts=125953652 us[0m
+[0;33mW (126820) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=443096 us (443.1 ms) misses=28/56[0m
+[0;32mI (127380) PRIOMQTT_S1: PUB | seq=56 ts=126953652 us[0m
+[0;33mW (127630) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=257013 us (257.0 ms) misses=29/57[0m
+[0;32mI (128380) PRIOMQTT_S1: PUB | seq=57 ts=127953652 us[0m
+[0;32mI (128410) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=36403 us (36.4 ms)[0m
+[0;32mI (129380) PRIOMQTT_S1: PUB | seq=58 ts=128953652 us[0m
+[0;33mW (129680) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=304896 us (304.9 ms) misses=30/59[0m
+[0;32mI (130380) PRIOMQTT_S1: PUB | seq=59 ts=129953652 us[0m
+[0;33mW (130750) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=371718 us (371.7 ms) misses=31/60[0m
+[0;32mI (131380) PRIOMQTT_S1: PUB | seq=60 ts=130953653 us[0m
+[0;32mI (131380) PRIOMQTT_S1: --- STATS S1 | pub=60 miss=31 (51.7%) rtt_avg=150.27ms rtt_max=535.25ms ---[0m
+[0;32mI (131420) wifi:state: run -> init (1a0)[0m
+[0;32mI (131430) wifi:pm stop, total sleep time: 55102088 us / 68265087 us[0m
+
+[0;32mI (131430) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (131430) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (131430) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;31mE (131440) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;32mI (131450) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (131450) wifi:state: init -> auth (b0)[0m
+[0;31mE (131460) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;33mW (131470) PRIOMQTT_S1: Desconectado do broker MQTT.[0m
+[0;32mI (131510) wifi:state: auth -> assoc (0)[0m
+[0;32mI (131560) wifi:state: assoc -> run (10)[0m
+[0;32mI (131600) wifi:state: run -> init (3a0)[0m
+[0;32mI (131620) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (131620) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (134030) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (136450) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (138860) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (141280) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (141390) PRIOMQTT_S1: --- STATS S1 | pub=60 miss=31 (51.7%) rtt_avg=150.27ms rtt_max=535.25ms ---[0m
+[0;33mW (143690) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (146110) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (146120) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (146120) wifi:state: init -> auth (b0)[0m
+[0;32mI (146140) wifi:state: auth -> assoc (0)[0m
+[0;32mI (146170) wifi:state: assoc -> run (10)[0m
+[0;32mI (146210) wifi:connected with teste, aid = 2, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (146210) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (146210) wifi:pm start, type: 1[0m
+
+[0;32mI (146210) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (146260) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (146260) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;31mE (146470) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (146470) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (146470) mqtt_client: Error transport connect[0m
+[0;31mE (146480) PRIOMQTT_S1: Erro MQTT.[0m
+[0;33mW (146480) PRIOMQTT_S1: Desconectado do broker MQTT.[0m
+[0;32mI (146740) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (147720) esp_netif_handlers: sta ip: 10.141.135.50, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (147720) PRIOMQTT_S1: IP obtido: 10.141.135.50[0m
+[0;32mI (151390) PRIOMQTT_S1: --- STATS S1 | pub=60 miss=31 (51.7%) rtt_avg=150.27ms rtt_max=535.25ms ---[0m
+[0;32mI (156520) PRIOMQTT_S1: Conectado ao broker MQTT.[0m
+[0;32mI (156520) PRIOMQTT_S1: Subscrito em cmd/s1[0m
+[0;32mI (156520) PRIOMQTT_S1: PUB | seq=61 ts=156099066 us[0m
+[0;32mI (156550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31833 us (31.8 ms)[0m
+[0;32mI (157520) PRIOMQTT_S1: PUB | seq=62 ts=157093652 us[0m
+[0;33mW (157610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=99416 us (99.4 ms) misses=32/62[0m
+[0;32mI (158520) PRIOMQTT_S1: PUB | seq=63 ts=158093652 us[0m
+[0;33mW (158580) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=60660 us (60.7 ms) misses=33/63[0m
+[0;32mI (159520) PRIOMQTT_S1: PUB | seq=64 ts=159093652 us[0m
+[0;32mI (159540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26152 us (26.2 ms)[0m
+[0;32mI (160520) PRIOMQTT_S1: PUB | seq=65 ts=160093652 us[0m
+[0;32mI (160540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29723 us (29.7 ms)[0m
+[0;32mI (161390) PRIOMQTT_S1: --- STATS S1 | pub=65 miss=33 (50.8%) rtt_avg=142.52ms rtt_max=535.25ms ---[0m
+[0;32mI (161520) PRIOMQTT_S1: PUB | seq=66 ts=161093652 us[0m
+[0;32mI (161540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28518 us (28.5 ms)[0m
+[0;32mI (162520) PRIOMQTT_S1: PUB | seq=67 ts=162093652 us[0m
+[0;32mI (162540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27478 us (27.5 ms)[0m
+[0;32mI (163520) PRIOMQTT_S1: PUB | seq=68 ts=163093652 us[0m
+[0;32mI (163540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26507 us (26.5 ms)[0m
+[0;32mI (164520) PRIOMQTT_S1: PUB | seq=69 ts=164093652 us[0m
+[0;32mI (164540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26457 us (26.5 ms)[0m
+[0;32mI (165520) PRIOMQTT_S1: PUB | seq=70 ts=165093707 us[0m
+[0;33mW (165600) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=88207 us (88.2 ms) misses=34/70[0m
+[0;32mI (166520) PRIOMQTT_S1: PUB | seq=71 ts=166093652 us[0m
+[0;33mW (166570) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=50828 us (50.8 ms) misses=35/71[0m
+[0;32mI (167520) PRIOMQTT_S1: PUB | seq=72 ts=167093652 us[0m
+[0;32mI (167540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29601 us (29.6 ms)[0m
+[0;32mI (168520) PRIOMQTT_S1: PUB | seq=73 ts=168093652 us[0m
+[0;33mW (168610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=97872 us (97.9 ms) misses=36/73[0m
+[0;32mI (169520) PRIOMQTT_S1: PUB | seq=74 ts=169093652 us[0m
+[0;32mI (169540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29085 us (29.1 ms)[0m
+[0;32mI (170520) PRIOMQTT_S1: PUB | seq=75 ts=170094174 us[0m
+[0;32mI (170540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27741 us (27.7 ms)[0m
+[0;32mI (171390) PRIOMQTT_S1: --- STATS S1 | pub=75 miss=36 (48.0%) rtt_avg=129.28ms rtt_max=535.25ms ---[0m
+[0;32mI (171520) PRIOMQTT_S1: PUB | seq=76 ts=171093652 us[0m
+[0;33mW (171570) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=55324 us (55.3 ms) misses=37/76[0m
+[0;32mI (172520) PRIOMQTT_S1: PUB | seq=77 ts=172093652 us[0m
+[0;32mI (172540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=25983 us (26.0 ms)[0m
+[0;32mI (173520) PRIOMQTT_S1: PUB | seq=78 ts=173093652 us[0m
+[0;32mI (173540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27571 us (27.6 ms)[0m
+[0;32mI (174520) PRIOMQTT_S1: PUB | seq=79 ts=174093652 us[0m
+[0;33mW (174610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=90439 us (90.4 ms) misses=38/79[0m
+[0;32mI (175520) PRIOMQTT_S1: PUB | seq=80 ts=175093652 us[0m
+[0;33mW (175570) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=53897 us (53.9 ms) misses=39/80[0m
+[0;32mI (176520) PRIOMQTT_S1: PUB | seq=81 ts=176093652 us[0m
+[0;32mI (176540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27601 us (27.6 ms)[0m
+[0;32mI (177520) PRIOMQTT_S1: PUB | seq=82 ts=177093652 us[0m
+[0;33mW (177620) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=100629 us (100.6 ms) misses=40/82[0m
+[0;32mI (178520) PRIOMQTT_S1: PUB | seq=83 ts=178093652 us[0m
+[0;32mI (178550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29975 us (30.0 ms)[0m
+[0;32mI (179520) PRIOMQTT_S1: PUB | seq=84 ts=179093652 us[0m
+[0;32mI (179550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=33405 us (33.4 ms)[0m
+[0;32mI (180520) PRIOMQTT_S1: PUB | seq=85 ts=180093652 us[0m
+[0;33mW (180680) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=161868 us (161.9 ms) misses=41/85[0m
+[0;32mI (181390) PRIOMQTT_S1: --- STATS S1 | pub=85 miss=41 (48.2%) rtt_avg=121.21ms rtt_max=535.25ms ---[0m
+[0;32mI (181520) PRIOMQTT_S1: PUB | seq=86 ts=181093652 us[0m
+[0;33mW (181910) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=390219 us (390.2 ms) misses=42/86[0m
+[0;32mI (182520) PRIOMQTT_S1: PUB | seq=87 ts=182093652 us[0m
+[0;33mW (182730) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=212177 us (212.2 ms) misses=43/87[0m
+[0;32mI (183520) PRIOMQTT_S1: PUB | seq=88 ts=183093652 us[0m
+[0;32mI (183550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=34556 us (34.6 ms)[0m
+[0;32mI (184520) PRIOMQTT_S1: PUB | seq=89 ts=184093652 us[0m
+[0;33mW (184790) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=277672 us (277.7 ms) misses=44/89[0m
+[0;32mI (185520) PRIOMQTT_S1: PUB | seq=90 ts=185093652 us[0m
+[0;33mW (185800) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=281484 us (281.5 ms) misses=45/90[0m
+[0;32mI (186520) PRIOMQTT_S1: PUB | seq=91 ts=186093652 us[0m
+[0;33mW (186820) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=306731 us (306.7 ms) misses=46/91[0m
+[0;32mI (187520) PRIOMQTT_S1: PUB | seq=92 ts=187093652 us[0m
+[0;32mI (187550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35417 us (35.4 ms)[0m
+[0;32mI (188520) PRIOMQTT_S1: PUB | seq=93 ts=188093652 us[0m
+[0;32mI (188540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28005 us (28.0 ms)[0m
+[0;32mI (189520) PRIOMQTT_S1: PUB | seq=94 ts=189093652 us[0m
+[0;32mI (189540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=25372 us (25.4 ms)[0m
+[0;32mI (190520) PRIOMQTT_S1: PUB | seq=95 ts=190093652 us[0m
+[0;32mI (190540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29028 us (29.0 ms)[0m
+[0;32mI (191390) PRIOMQTT_S1: --- STATS S1 | pub=95 miss=46 (48.4%) rtt_avg=125.51ms rtt_max=535.25ms ---[0m
+[0;32mI (191520) PRIOMQTT_S1: PUB | seq=96 ts=191093644 us[0m
+[0;33mW (191610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=91405 us (91.4 ms) misses=47/96[0m
+[0;32mI (192520) PRIOMQTT_S1: PUB | seq=97 ts=192093652 us[0m
+[0;33mW (192760) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=245893 us (245.9 ms) misses=48/97[0m
+[0;32mI (193520) PRIOMQTT_S1: PUB | seq=98 ts=193093652 us[0m
+[0;32mI (193550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=33253 us (33.3 ms)[0m
+[0;32mI (194520) PRIOMQTT_S1: PUB | seq=99 ts=194093652 us[0m
+[0;33mW (194620) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=101339 us (101.3 ms) misses=49/99[0m
+[0;32mI (195520) PRIOMQTT_S1: PUB | seq=100 ts=195093652 us[0m
+[0;33mW (195830) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=317297 us (317.3 ms) misses=50/100[0m
+[0;32mI (196520) PRIOMQTT_S1: PUB | seq=101 ts=196093652 us[0m
+[0;32mI (196550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31739 us (31.7 ms)[0m
+[0;32mI (197520) PRIOMQTT_S1: PUB | seq=102 ts=197093652 us[0m
+[0;33mW (197700) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=180390 us (180.4 ms) misses=51/102[0m
+[0;32mI (198520) PRIOMQTT_S1: PUB | seq=103 ts=198093652 us[0m
+[0;32mI (198540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=23980 us (24.0 ms)[0m
+[0;32mI (199520) PRIOMQTT_S1: PUB | seq=104 ts=199093652 us[0m
+[0;33mW (199590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=77110 us (77.1 ms) misses=52/104[0m
+[0;32mI (200520) PRIOMQTT_S1: PUB | seq=105 ts=200093652 us[0m
+[0;32mI (200550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31117 us (31.1 ms)[0m
+[0;32mI (201390) PRIOMQTT_S1: --- STATS S1 | pub=105 miss=52 (49.5%) rtt_avg=124.35ms rtt_max=535.25ms ---[0m
+[0;32mI (201520) PRIOMQTT_S1: PUB | seq=106 ts=201093644 us[0m
+[0;33mW (201590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=74511 us (74.5 ms) misses=53/106[0m
+[0;32mI (202520) PRIOMQTT_S1: PUB | seq=107 ts=202093652 us[0m
+[0;33mW (202810) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=290101 us (290.1 ms) misses=54/107[0m
+[0;32mI (203520) PRIOMQTT_S1: PUB | seq=108 ts=203093652 us[0m
+[0;33mW (203640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=120925 us (120.9 ms) misses=55/108[0m
+[0;32mI (204520) PRIOMQTT_S1: PUB | seq=109 ts=204093652 us[0m
+[0;32mI (204550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31916 us (31.9 ms)[0m
+[0;32mI (205520) PRIOMQTT_S1: PUB | seq=110 ts=205093652 us[0m
+[0;32mI (205550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31945 us (31.9 ms)[0m
+[0;32mI (206520) PRIOMQTT_S1: PUB | seq=111 ts=206093652 us[0m
+[0;32mI (206540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27622 us (27.6 ms)[0m
+[0;32mI (207520) PRIOMQTT_S1: PUB | seq=112 ts=207093652 us[0m
+[0;32mI (207540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27404 us (27.4 ms)[0m
+[0;32mI (208520) PRIOMQTT_S1: PUB | seq=113 ts=208093652 us[0m
+[0;33mW (208740) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=222039 us (222.0 ms) misses=56/113[0m
+[0;32mI (209520) PRIOMQTT_S1: PUB | seq=114 ts=209093652 us[0m
+[0;33mW (209570) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=53207 us (53.2 ms) misses=57/114[0m
+[0;32mI (210520) PRIOMQTT_S1: PUB | seq=115 ts=210093652 us[0m
+[0;33mW (210640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=124739 us (124.7 ms) misses=58/115[0m
+[0;32mI (211390) PRIOMQTT_S1: --- STATS S1 | pub=115 miss=58 (50.4%) rtt_avg=122.27ms rtt_max=535.25ms ---[0m
+[0;32mI (211520) PRIOMQTT_S1: PUB | seq=116 ts=211093648 us[0m
+[0;33mW (211810) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=291241 us (291.2 ms) misses=59/116[0m
+[0;32mI (212520) PRIOMQTT_S1: PUB | seq=117 ts=212093652 us[0m
+[0;33mW (212830) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=314629 us (314.6 ms) misses=60/117[0m
+[0;32mI (213520) PRIOMQTT_S1: PUB | seq=118 ts=213093652 us[0m
+[0;32mI (213550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=33332 us (33.3 ms)[0m
+[0;32mI (214520) PRIOMQTT_S1: PUB | seq=119 ts=214093652 us[0m
+[0;32mI (214540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29578 us (29.6 ms)[0m
+[0;32mI (215520) PRIOMQTT_S1: PUB | seq=120 ts=215093652 us[0m
+[0;32mI (215540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24778 us (24.8 ms)[0m
+[0;32mI (216520) PRIOMQTT_S1: PUB | seq=121 ts=216093652 us[0m
+[0;32mI (216550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=38704 us (38.7 ms)[0m
+[0;32mI (217520) PRIOMQTT_S1: PUB | seq=122 ts=217093652 us[0m
+[0;32mI (217550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31755 us (31.8 ms)[0m
+[0;32mI (218520) PRIOMQTT_S1: PUB | seq=123 ts=218093652 us[0m
+[0;33mW (218770) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=254881 us (254.9 ms) misses=61/123[0m
+[0;32mI (219520) PRIOMQTT_S1: PUB | seq=124 ts=219093652 us[0m
+[0;32mI (219540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28194 us (28.2 ms)[0m
+[0;32mI (220520) PRIOMQTT_S1: PUB | seq=125 ts=220093652 us[0m
+[0;33mW (220820) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=301383 us (301.4 ms) misses=62/125[0m
+[0;32mI (221390) PRIOMQTT_S1: --- STATS S1 | pub=125 miss=62 (49.6%) rtt_avg=123.28ms rtt_max=535.25ms ---[0m
+[0;32mI (221520) PRIOMQTT_S1: PUB | seq=126 ts=221093648 us[0m
+[0;32mI (221550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=36984 us (37.0 ms)[0m
+[0;32mI (222520) PRIOMQTT_S1: PUB | seq=127 ts=222093652 us[0m
+[0;32mI (222540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=23474 us (23.5 ms)[0m
+[0;32mI (223520) PRIOMQTT_S1: PUB | seq=128 ts=223093652 us[0m
+[0;32mI (223540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=25109 us (25.1 ms)[0m
+[0;32mI (224520) PRIOMQTT_S1: PUB | seq=129 ts=224093652 us[0m
+[0;32mI (224550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31298 us (31.3 ms)[0m
+[0;32mI (225520) PRIOMQTT_S1: PUB | seq=130 ts=225093652 us[0m
+[0;33mW (225940) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=421237 us (421.2 ms) misses=63/130[0m
+[0;32mI (226520) PRIOMQTT_S1: PUB | seq=131 ts=226093652 us[0m
+[0;32mI (226560) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=49741 us (49.7 ms)[0m
+[0;32mI (227520) PRIOMQTT_S1: PUB | seq=132 ts=227093652 us[0m
+[0;33mW (227780) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=264261 us (264.3 ms) misses=64/132[0m
+[0;32mI (228520) PRIOMQTT_S1: PUB | seq=133 ts=228093652 us[0m
+[0;32mI (228540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=28260 us (28.3 ms)[0m
+[0;32mI (229520) PRIOMQTT_S1: PUB | seq=134 ts=229093652 us[0m
+[0;32mI (229540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27298 us (27.3 ms)[0m
+[0;32mI (230520) PRIOMQTT_S1: PUB | seq=135 ts=230093652 us[0m
+[0;32mI (230550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=32064 us (32.1 ms)[0m
+[0;32mI (231390) PRIOMQTT_S1: --- STATS S1 | pub=135 miss=64 (47.4%) rtt_avg=121.11ms rtt_max=535.25ms ---[0m
+[0;32mI (231520) PRIOMQTT_S1: PUB | seq=136 ts=231093648 us[0m
+[0;32mI (231540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26655 us (26.7 ms)[0m
+[0;32mI (232520) PRIOMQTT_S1: PUB | seq=137 ts=232093652 us[0m
+[0;32mI (232550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30482 us (30.5 ms)[0m
+[0;32mI (233520) PRIOMQTT_S1: PUB | seq=138 ts=233093652 us[0m
+[0;32mI (233560) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=39983 us (40.0 ms)[0m
+[0;32mI (234520) PRIOMQTT_S1: PUB | seq=139 ts=234093652 us[0m
+[0;33mW (234780) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=269490 us (269.5 ms) misses=65/139[0m
+[0;32mI (235520) PRIOMQTT_S1: PUB | seq=140 ts=235093652 us[0m
+[0;33mW (235580) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=63581 us (63.6 ms) misses=66/140[0m
+[0;32mI (236520) PRIOMQTT_S1: PUB | seq=141 ts=236093652 us[0m
+[0;33mW (236790) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=278515 us (278.5 ms) misses=67/141[0m
+[0;32mI (237520) PRIOMQTT_S1: PUB | seq=142 ts=237093652 us[0m
+[0;32mI (237550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31746 us (31.7 ms)[0m
+[0;32mI (238520) PRIOMQTT_S1: PUB | seq=143 ts=238093652 us[0m
+[0;33mW (238650) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=134126 us (134.1 ms) misses=68/143[0m
+[0;32mI (239520) PRIOMQTT_S1: PUB | seq=144 ts=239093652 us[0m
+[0;32mI (239550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30930 us (30.9 ms)[0m
+[0;32mI (240520) PRIOMQTT_S1: PUB | seq=145 ts=240093652 us[0m
+[0;32mI (240560) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=39961 us (40.0 ms)[0m
+[0;32mI (241390) PRIOMQTT_S1: --- STATS S1 | pub=145 miss=68 (46.9%) rtt_avg=119.28ms rtt_max=535.25ms ---[0m
+[0;32mI (241520) PRIOMQTT_S1: PUB | seq=146 ts=241093648 us[0m
+[0;32mI (241540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26225 us (26.2 ms)[0m
+[0;32mI (242520) PRIOMQTT_S1: PUB | seq=147 ts=242093652 us[0m
+[0;32mI (242550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=38220 us (38.2 ms)[0m
+[0;32mI (243520) PRIOMQTT_S1: PUB | seq=148 ts=243093652 us[0m
+[0;32mI (243560) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=49739 us (49.7 ms)[0m
+[0;32mI (244520) PRIOMQTT_S1: PUB | seq=149 ts=244093652 us[0m
+[0;33mW (244600) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=86270 us (86.3 ms) misses=69/149[0m
+[0;32mI (245520) PRIOMQTT_S1: PUB | seq=150 ts=245093652 us[0m
+[0;32mI (245550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30681 us (30.7 ms)[0m
+[0;32mI (246520) PRIOMQTT_S1: PUB | seq=151 ts=246093652 us[0m
+[0;33mW (246840) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=321189 us (321.2 ms) misses=70/151[0m
+[0;32mI (247520) PRIOMQTT_S1: PUB | seq=152 ts=247093652 us[0m
+[0;32mI (247550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30690 us (30.7 ms)[0m
+[0;32mI (248520) PRIOMQTT_S1: PUB | seq=153 ts=248093652 us[0m
+[0;32mI (248540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27785 us (27.8 ms)[0m
+[0;32mI (249520) PRIOMQTT_S1: PUB | seq=154 ts=249093652 us[0m
+[0;33mW (249710) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=195151 us (195.2 ms) misses=71/154[0m
+[0;32mI (250520) PRIOMQTT_S1: PUB | seq=155 ts=250093652 us[0m
+[0;32mI (250550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31880 us (31.9 ms)[0m
+[0;32mI (251390) PRIOMQTT_S1: --- STATS S1 | pub=155 miss=71 (45.8%) rtt_avg=116.99ms rtt_max=535.25ms ---[0m
+[0;32mI (251520) PRIOMQTT_S1: PUB | seq=156 ts=251093644 us[0m
+[0;33mW (251750) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=238281 us (238.3 ms) misses=72/156[0m
+[0;32mI (252520) PRIOMQTT_S1: PUB | seq=157 ts=252093652 us[0m
+[0;33mW (252760) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=249629 us (249.6 ms) misses=73/157[0m
+[0;32mI (253520) PRIOMQTT_S1: PUB | seq=158 ts=253093652 us[0m
+[0;33mW (253790) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=273902 us (273.9 ms) misses=74/158[0m
+[0;32mI (254520) PRIOMQTT_S1: PUB | seq=159 ts=254093652 us[0m
+[0;33mW (254810) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=297778 us (297.8 ms) misses=75/159[0m
+[0;32mI (255520) PRIOMQTT_S1: PUB | seq=160 ts=255093652 us[0m
+[0;33mW (255840) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=321825 us (321.8 ms) misses=76/160[0m
+[0;32mI (256520) PRIOMQTT_S1: PUB | seq=161 ts=256093652 us[0m
+[0;32mI (256540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=24607 us (24.6 ms)[0m
+[0;32mI (257520) PRIOMQTT_S1: PUB | seq=162 ts=257093652 us[0m
+[0;32mI (257550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31625 us (31.6 ms)[0m
+[0;32mI (258520) PRIOMQTT_S1: PUB | seq=163 ts=258093652 us[0m
+[0;32mI (258540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=26632 us (26.6 ms)[0m
+[0;32mI (259520) PRIOMQTT_S1: PUB | seq=164 ts=259093652 us[0m
+[0;32mI (259560) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=46962 us (47.0 ms)[0m
+[0;32mI (260520) PRIOMQTT_S1: PUB | seq=165 ts=260093652 us[0m
+[0;33mW (260570) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=50821 us (50.8 ms) misses=77/165[0m
+[0;32mI (261390) PRIOMQTT_S1: --- STATS S1 | pub=165 miss=77 (46.7%) rtt_avg=119.36ms rtt_max=535.25ms ---[0m
+[0;32mI (261520) PRIOMQTT_S1: PUB | seq=166 ts=261093644 us[0m
+[0;33mW (261610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=91773 us (91.8 ms) misses=78/166[0m
+[0;32mI (262520) PRIOMQTT_S1: PUB | seq=167 ts=262093652 us[0m
+[0;32mI (262540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=25358 us (25.4 ms)[0m
+[0;32mI (263520) PRIOMQTT_S1: PUB | seq=168 ts=263093652 us[0m
+[0;33mW (263830) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=310856 us (310.9 ms) misses=79/168[0m
+[0;32mI (264520) PRIOMQTT_S1: PUB | seq=169 ts=264093652 us[0m
+[0;33mW (264850) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=333524 us (333.5 ms) misses=80/169[0m
+[0;32mI (265520) PRIOMQTT_S1: PUB | seq=170 ts=265093652 us[0m
+[0;32mI (265540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27677 us (27.7 ms)[0m
+[0;32mI (266520) PRIOMQTT_S1: PUB | seq=171 ts=266093652 us[0m
+[0;33mW (266690) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=176720 us (176.7 ms) misses=81/171[0m
+[0;32mI (267520) PRIOMQTT_S1: PUB | seq=172 ts=267093652 us[0m
+[0;32mI (267550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35557 us (35.6 ms)[0m
+[0;32mI (268520) PRIOMQTT_S1: PUB | seq=173 ts=268093652 us[0m
+[0;32mI (268550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35371 us (35.4 ms)[0m
+[0;32mI (269520) PRIOMQTT_S1: PUB | seq=174 ts=269093652 us[0m
+[0;33mW (269780) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=267317 us (267.3 ms) misses=82/174[0m
+[0;32mI (270520) PRIOMQTT_S1: PUB | seq=175 ts=270093652 us[0m
+[0;33mW (270790) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=272120 us (272.1 ms) misses=83/175[0m
+[0;32mI (271390) PRIOMQTT_S1: --- STATS S1 | pub=175 miss=83 (47.4%) rtt_avg=121.55ms rtt_max=535.25ms ---[0m
+[0;32mI (271520) PRIOMQTT_S1: PUB | seq=176 ts=271093648 us[0m
+[0;32mI (271540) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29082 us (29.1 ms)[0m
+[0;32mI (272520) PRIOMQTT_S1: PUB | seq=177 ts=272093652 us[0m
+[0;33mW (272830) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=319796 us (319.8 ms) misses=84/177[0m
+[0;32mI (273520) PRIOMQTT_S1: PUB | seq=178 ts=273093652 us[0m
+[0;32mI (273550) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=32368 us (32.4 ms)[0m
+[0;32mI (274520) PRIOMQTT_S1: PUB | seq=179 ts=274093652 us[0m
+[0;33mW (274880) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=368187 us (368.2 ms) misses=85/179[0m
+[0;32mI (275520) PRIOMQTT_S1: PUB | seq=180 ts=275093652 us[0m
+[0;33mW (275580) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=62813 us (62.8 ms) misses=86/180[0m
+ (44�O*W�ѥ���scheduler on CPU1[0m
+[0;32mI (440) main_task: Started on CPU0[0m
+[0;32mI (450) main_task: Calling app_main()[0m
+[0;32mI (470) PRIOMQTT_S1: === PrioMQTT Publisher | node=s1 ===[0m
+[0;32mI (470) PRIOMQTT_S1: Broker: 10.141.135.69:1883[0m
+[0;32mI (470) PRIOMQTT_S1: Topico pub: sensor/s1 | cmd: cmd/s1[0m
+[0;32mI (480) PRIOMQTT_S1: Deadline: 50000 us (50 ms)[0m
+[0;32mI (500) wifi:wifi driver task: 3ffc0378, prio:23, stack:6656, core=0[0m
+[0;32mI (510) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (510) wifi:wifi certification version: v7.0[0m
+[0;32mI (510) wifi:config NVS flash: enabled[0m
+[0;32mI (510) wifi:config nano formating: disabled[0m
+[0;32mI (510) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (520) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (520) wifi:Init management short buffer num: 32[0m
+[0;32mI (530) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (530) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (540) wifi:Init static rx buffer num: 10[0m
+[0;32mI (540) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (540) wifi_init: rx ba win: 6[0m
+[0;32mI (550) wifi_init: tcpip mbox: 32[0m
+[0;32mI (550) wifi_init: udp mbox: 6[0m
+[0;32mI (550) wifi_init: tcp mbox: 6[0m
+[0;32mI (560) wifi_init: tcp tx win: 5760[0m
+[0;32mI (560) wifi_init: tcp rx win: 5760[0m
+[0;32mI (570) wifi_init: tcp mss: 1440[0m
+[0;32mI (570) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (580) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (580) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (590) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (670) wifi:mode : sta (cc:db:a7:21:bf:04)[0m
+[0;32mI (670) wifi:enable tsf[0m
+[0;32mI (680) PRIOMQTT_S1: Aguardando conexao Wi-Fi...[0m
+[0;32mI (690) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (690) wifi:state: init -> auth (b0)[0m
+[0;32mI (700) wifi:state: auth -> init (1c0)[0m
+[0;32mI (720) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (720) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (3130) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (3150) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (3150) wifi:state: init -> auth (b0)[0m
+[0;32mI (3170) wifi:state: auth -> assoc (0)[0m
+[0;32mI (3210) wifi:state: assoc -> run (10)[0m
+[0;32mI (3240) wifi:connected with teste, aid = 6, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (3240) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (3240) wifi:pm start, type: 1[0m
+
+[0;32mI (3240) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3260) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3260) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3280) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (4250) esp_netif_handlers: sta ip: 10.141.135.50, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (4250) PRIOMQTT_S1: IP obtido: 10.141.135.50[0m
+[0;32mI (4250) PRIOMQTT_S1: Wi-Fi conectado.[0m
+[0;32mI (4260) PRIOMQTT_S1: Aguardando conexao MQTT...[0m
+[0;32mI (4320) PRIOMQTT_S1: Conectado ao broker MQTT.[0m
+[0;32mI (4320) PRIOMQTT_S1: Subscrito em cmd/s1[0m
+[0;32mI (4320) PRIOMQTT_S1: PUB | seq=0 ts=3898337 us[0m
+[0;32mI (4320) main_task: Returned from app_main()[0m
+[0;33mW (4520) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=197746 us (197.7 ms) misses=1/1[0m
+[0;32mI (5320) PRIOMQTT_S1: PUB | seq=1 ts=4893652 us[0m
+[0;32mI (5350) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=32404 us (32.4 ms)[0m
+[0;32mI (6320) PRIOMQTT_S1: PUB | seq=2 ts=5893652 us[0m
+[0;33mW (6750) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=430855 us (430.9 ms) misses=2/3[0m
+[0;32mI (7320) PRIOMQTT_S1: PUB | seq=3 ts=6893652 us[0m
+[0;33mW (7490) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=177182 us (177.2 ms) misses=3/4[0m
+[0;32mI (8320) PRIOMQTT_S1: PUB | seq=4 ts=7893652 us[0m
+[0;33mW (8400) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=84801 us (84.8 ms) misses=4/5[0m
+[0;32mI (9320) PRIOMQTT_S1: PUB | seq=5 ts=8893652 us[0m
+[0;33mW (9610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=298750 us (298.8 ms) misses=5/6[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun  8 2026 19:15:12[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=248d8h (149720) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00034900 vaddr=3ffb0000 size=03bfch ( 15356) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00038504 vaddr=40080000 size=07b14h ( 31508) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bb18h (637720) map[0m
+[0;32mI (283) esp_image: segment 4: paddr=000dbb40 vaddr=40087b14 size=0ec0ch ( 60428) load[0m
+[0;32mI (310) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (310) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Multicore app[0m
+[0;32mI (323) cpu_start: Pro cpu up.[0m
+[0;32mI (323) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (340) cpu_start: Pro cpu start user code[0m
+[0;32mI (340) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (340) cpu_start: Application information:[0m
+[0;32mI (345) cpu_start: Project name:     publisher_s1[0m
+[0;32mI (350) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (356) cpu_start: Compile time:     Jun 17 2026 21:38:33[0m
+[0;32mI (362) cpu_start: ELF file SHA256:  8988cf55f6830b30...[0m
+[0;32mI (368) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (373) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (378) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (383) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (388) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (401) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (407) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (413) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (420) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (431) spi_flash: flash io: dio[0m
+[0;32mI (436) app_start: Starting scheduler on CPU0[0m
+[0;32mI (440) app_start: Starting scheduler on CPU1[0m
+[0;32mI (440) main_task: Started on CPU0[0m
+[0;32mI (450) main_task: Calling app_main()[0m
+[0;32mI (470) PRIOMQTT_S1: === PrioMQTT Publisher | node=s1 ===[0m
+[0;32mI (470) PRIOMQTT_S1: Broker: 10.141.135.69:1883[0m
+[0;32mI (470) PRIOMQTT_S1: Topico pub: sensor/s1 | cmd: cmd/s1[0m
+[0;32mI (480) PRIOMQTT_S1: Deadline: 50000 us (50 ms)[0m
+[0;32mI (500) wifi:wifi driver task: 3ffc0378, prio:23, stack:6656, core=0[0m
+[0;32mI (510) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (510) wifi:wifi certification version: v7.0[0m
+[0;32mI (510) wifi:config NVS flash: enabled[0m
+[0;32mI (510) wifi:config nano formating: disabled[0m
+[0;32mI (510) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (520) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (520) wifi:Init management short buffer num: 32[0m
+[0;32mI (530) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (530) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (540) wifi:Init static rx buffer num: 10[0m
+[0;32mI (540) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (540) wifi_init: rx ba win: 6[0m
+[0;32mI (550) wifi_init: tcpip mbox: 32[0m
+[0;32mI (550) wifi_init: udp mbox: 6[0m
+[0;32mI (550) wifi_init: tcp mbox: 6[0m
+[0;32mI (560) wifi_init: tcp tx win: 5760[0m
+[0;32mI (560) wifi_init: tcp rx win: 5760[0m
+[0;32mI (570) wifi_init: tcp mss: 1440[0m
+[0;32mI (570) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (580) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (580) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (590) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (670) wifi:mode : sta (cc:db:a7:21:bf:04)[0m
+[0;32mI (670) wifi:enable tsf[0m
+[0;32mI (680) PRIOMQTT_S1: Aguardando conexao Wi-Fi...[0m
+[0;32mI (690) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (690) wifi:state: init -> auth (b0)[0m
+[0;32mI (700) wifi:state: auth -> init (1c0)[0m
+[0;32mI (710) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (710) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (3120) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (3130) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (3140) wifi:state: init -> auth (b0)[0m
+[0;32mI (3150) wifi:state: auth -> assoc (0)[0m
+[0;32mI (3250) wifi:state: assoc -> run (10)[0m
+[0;32mI (3270) wifi:connected with teste, aid = 7, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (3270) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (3280) wifi:pm start, type: 1[0m
+
+[0;32mI (3280) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3290) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3290) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3320) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun  8 2026 19:15:12[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=248d8h (149720) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00034900 vaddr=3ffb0000 size=03bfch ( 15356) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00038504 vaddr=40080000 size=07b14h ( 31508) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bb18h (637720) map[0m
+[0;32mI (283) esp_image: segment 4: paddr=000dbb40 vaddr=40087b14 size=0ec0ch ( 60428) load[0m
+[0;32mI (310) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (310) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Multicore app[0m
+[0;32mI (323) cpu_start: Pro cpu up.[0m
+[0;32mI (323) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (340) cpu_start: Pro cpu start user code[0m
+[0;32mI (340) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (340) cpu_start: Application information:[0m
+[0;32mI (345) cpu_start: Project name:     publisher_s1[0m
+[0;32mI (350) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (356) cpu_start: Compile time:     Jun 17 2026 21:38:33[0m
+[0;32mI (362) cpu_start: ELF file SHA256:  8988cf55f6830b30...[0m
+[0;32mI (368) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (373) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (378) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (383) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (388) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (401) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (407) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (413) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (420) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (431) spi_flash: flash io: dio[0m
+[0;32mI (436) app_start: Starting scheduler on CPU0[0m
+[0;32mI (440) app_start: Starting scheduler on CPU1[0m
+[0;32mI (440) main_task: Started on CPU0[0m
+[0;32mI (450) main_task: Calling app_main()[0m
+[0;32mI (470) PRIOMQTT_S1: === PrioMQTT Publisher | node=s1 ===[0m
+[0;32mI (470) PRIOMQTT_S1: Broker: 10.141.135.69:1883[0m
+[0;32mI (470) PRIOMQTT_S1: Topico pub: sensor/s1 | cmd: cmd/s1[0m
+[0;32mI (480) PRIOMQTT_S1: Deadline: 50000 us (50 ms)[0m
+[0;32mI (500) wifi:wifi driver task: 3ffc0378, prio:23, stack:6656, core=0[0m
+[0;32mI (510) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (510) wifi:wifi certification version: v7.0[0m
+[0;32mI (510) wifi:config NVS flash: enabled[0m
+[0;32mI (510) wifi:config nano formating: disabled[0m
+[0;32mI (510) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (520) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (520) wifi:Init management short buffer num: 32[0m
+[0;32mI (530) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (530) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (540) wifi:Init static rx buffer num: 10[0m
+[0;32mI (540) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (540) wifi_init: rx ba win: 6[0m
+[0;32mI (550) wifi_init: tcpip mbox: 32[0m
+[0;32mI (550) wifi_init: udp mbox: 6[0m
+[0;32mI (550) wifi_init: tcp mbox: 6[0m
+[0;32mI (560) wifi_init: tcp tx win: 5760[0m
+[0;32mI (560) wifi_init: tcp rx win: 5760[0m
+[0;32mI (570) wifi_init: tcp mss: 1440[0m
+[0;32mI (570) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (580) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (580) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (590) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (670) wifi:mode : sta (cc:db:a7:21:bf:04)[0m
+[0;32mI (680) wifi:enable tsf[0m
+[0;32mI (680) PRIOMQTT_S1: Aguardando conexao Wi-Fi...[0m
+[0;32mI (690) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (690) wifi:state: init -> auth (b0)[0m
+[0;32mI (1690) wifi:state: auth -> init (200)[0m
+[0;32mI (1710) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (1710) PRIOMQTT_S1: Wi-Fi desconectado. Reconectando...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun  8 2026 19:15:12[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=248d8h (149720) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00034900 vaddr=3ffb0000 size=03bfch ( 15356) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00038504 vaddr=40080000 size=07b14h ( 31508) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bb18h (637720) map[0m
+[0;32mI (283) esp_image: segment 4: paddr=000dbb40 vaddr=40087b14 size=0ec0ch ( 60428) load[0m
+[0;32mI (310) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (310) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Multicore app[0m
+[0;32mI (323) cpu_start: Pro cpu up.[0m
+[0;32mI (323) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (340) cpu_start: Pro cpu start user code[0m
+[0;32mI (340) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (340) cpu_start: Application information:[0m
+[0;32mI (345) cpu_start: Project name:     publisher_s1[0m
+[0;32mI (350) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (356) cpu_start: Compile time:     Jun 17 2026 21:38:33[0m
+[0;32mI (362) cpu_start: ELF file SHA256:  8988cf55f6830b30...[0m
+[0;32mI (368) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (373) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (378) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (383) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (388) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (401) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (407) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (413) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (420) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (428) spi_flash: detected chip: generic[0m
+[0;32mI (431) spi_flash: flash io: dio[0m
+[0;32mI (436) app_start: Starting scheduler on CPU0[0m
+[0;32mI (440) app_start: Starting scheduler on CPU1[0m
+[0;32mI (440) main_task: Started on CPU0[0m
+[0;32mI (450) main_task: Calling app_main()[0m
+[0;32mI (470) PRIOMQTT_S1: === PrioMQTT Publisher | node=s1 ===[0m
+[0;32mI (470) PRIOMQTT_S1: Broker: 10.141.135.69:1883[0m
+[0;32mI (470) PRIOMQTT_S1: Topico pub: sensor/s1 | cmd: cmd/s1[0m
+[0;32mI (480) PRIOMQTT_S1: Deadline: 50000 us (50 ms)[0m
+[0;32mI (500) wifi:wifi driver task: 3ffc0378, prio:23, stack:6656, core=0[0m
+[0;32mI (510) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (510) wifi:wifi certification version: v7.0[0m
+[0;32mI (510) wifi:config NVS flash: enabled[0m
+[0;32mI (510) wifi:config nano formating: disabled[0m
+[0;32mI (510) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (520) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (520) wifi:Init management short buffer num: 32[0m
+[0;32mI (530) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (530) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (540) wifi:Init static rx buffer num: 10[0m
+[0;32mI (540) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (540) wifi_init: rx ba win: 6[0m
+[0;32mI (550) wifi_init: tcpip mbox: 32[0m
+[0;32mI (550) wifi_init: udp mbox: 6[0m
+[0;32mI (550) wifi_init: tcp mbox: 6[0m
+[0;32mI (560) wifi_init: tcp tx win: 5760[0m
+[0;32mI (560) wifi_init: tcp rx win: 5760[0m
+[0;32mI (570) wifi_init: tcp mss: 1440[0m
+[0;32mI (570) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (580) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (580) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (590) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (680) wifi:mode : sta (cc:db:a7:21:bf:04)[0m
+[0;32mI (680) wifi:enable tsf[0m
+[0;32mI (680) PRIOMQTT_S1: Aguardando conexao Wi-Fi...[0m
+[0;32mI (690) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (690) wifi:state: init -> auth (b0)[0m
+[0;32mI (710) wifi:state: auth -> assoc (0)[0m
+[0;32mI (760) wifi:state: assoc -> run (10)[0m
+[0;32mI (790) wifi:connected with teste, aid = 8, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (790) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (790) wifi:pm start, type: 1[0m
+
+[0;32mI (790) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (800) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (810) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (830) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1820) esp_netif_handlers: sta ip: 10.141.135.50, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (1820) PRIOMQTT_S1: IP obtido: 10.141.135.50[0m
+[0;32mI (1820) PRIOMQTT_S1: Wi-Fi conectado.[0m
+[0;32mI (1830) PRIOMQTT_S1: Aguardando conexao MQTT...[0m
+[0;32mI (2280) PRIOMQTT_S1: Conectado ao broker MQTT.[0m
+[0;32mI (2290) PRIOMQTT_S1: Subscrito em cmd/s1[0m
+[0;32mI (2290) PRIOMQTT_S1: PUB | seq=0 ts=1864090 us[0m
+[0;32mI (2290) main_task: Returned from app_main()[0m
+[0;33mW (2350) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=61102 us (61.1 ms) misses=1/1[0m
+[0;32mI (3290) PRIOMQTT_S1: PUB | seq=1 ts=2863652 us[0m
+[0;33mW (3490) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=207523 us (207.5 ms) misses=2/2[0m
+[0;32mI (4290) PRIOMQTT_S1: PUB | seq=2 ts=3863652 us[0m
+[0;32mI (5290) PRIOMQTT_S1: PUB | seq=3 ts=4863648 us[0m
+[0;33mW (5750) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=469573 us (469.6 ms) misses=3/3[0m
+[0;33mW (5840) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=554172 us (554.2 ms) misses=4/4[0m
+[0;32mI (6290) PRIOMQTT_S1: PUB | seq=4 ts=5863652 us[0m
+[0;33mW (6350) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=64125 us (64.1 ms) misses=5/5[0m
+[0;32mI (7290) PRIOMQTT_S1: PUB | seq=5 ts=6863652 us[0m
+[0;33mW (7560) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=279399 us (279.4 ms) misses=6/6[0m
+[0;32mI (8290) PRIOMQTT_S1: PUB | seq=6 ts=7863652 us[0m
+[0;33mW (8590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=303404 us (303.4 ms) misses=7/7[0m
+[0;32mI (9290) PRIOMQTT_S1: PUB | seq=7 ts=8863652 us[0m
+[0;33mW (9610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=327955 us (328.0 ms) misses=8/8[0m
+[0;32mI (10290) PRIOMQTT_S1: PUB | seq=8 ts=9863652 us[0m
+[0;33mW (10640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=350263 us (350.3 ms) misses=9/9[0m
+[0;32mI (11290) PRIOMQTT_S1: PUB | seq=9 ts=10863652 us[0m
+[0;32mI (11310) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=27402 us (27.4 ms)[0m
+[0;32mI (12290) PRIOMQTT_S1: PUB | seq=10 ts=11863653 us[0m
+[0;32mI (12290) PRIOMQTT_S1: --- STATS S1 | pub=10 miss=9 (90.0%) rtt_avg=264.49ms rtt_max=554.17ms ---[0m
+[0;32mI (12320) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=30286 us (30.3 ms)[0m
+[0;32mI (13290) PRIOMQTT_S1: PUB | seq=11 ts=12863652 us[0m
+[0;32mI (13320) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31634 us (31.6 ms)[0m
+[0;32mI (14290) PRIOMQTT_S1: PUB | seq=12 ts=13863652 us[0m
+[0;33mW (14350) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=63358 us (63.4 ms) misses=10/13[0m
+[0;32mI (15290) PRIOMQTT_S1: PUB | seq=13 ts=14863652 us[0m
+[0;33mW (15360) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=76843 us (76.8 ms) misses=11/14[0m
+[0;32mI (16290) PRIOMQTT_S1: PUB | seq=14 ts=15863652 us[0m
+[0;33mW (16580) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=292900 us (292.9 ms) misses=12/15[0m
+[0;32mI (17290) PRIOMQTT_S1: PUB | seq=15 ts=16863652 us[0m
+[0;33mW (17600) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=314945 us (314.9 ms) misses=13/16[0m
+[0;32mI (18290) PRIOMQTT_S1: PUB | seq=16 ts=17863652 us[0m
+[0;32mI (18320) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=31858 us (31.9 ms)[0m
+[0;32mI (19290) PRIOMQTT_S1: PUB | seq=17 ts=18863652 us[0m
+[0;32mI (19310) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29325 us (29.3 ms)[0m
+[0;32mI (20290) PRIOMQTT_S1: PUB | seq=18 ts=19863652 us[0m
+[0;32mI (20310) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=29099 us (29.1 ms)[0m
+[0;32mI (21290) PRIOMQTT_S1: PUB | seq=19 ts=20863652 us[0m
+[0;32mI (21320) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=35202 us (35.2 ms)[0m
+[0;32mI (22290) PRIOMQTT_S1: PUB | seq=20 ts=21863653 us[0m
+[0;32mI (22290) PRIOMQTT_S1: --- STATS S1 | pub=20 miss=13 (65.0%) rtt_avg=179.02ms rtt_max=554.17ms ---[0m
+[0;32mI (22330) PRIOMQTT_S1: RTT  | topic=cmd/s1 rtt=49090 us (49.1 ms)[0m
+[0;32mI (23290) PRIOMQTT_S1: PUB | seq=21 ts=22863652 us[0m
+[0;33mW (23550) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=269741 us (269.7 ms) misses=14/22[0m
+[0;32mI (24290) PRIOMQTT_S1: PUB | seq=22 ts=23863652 us[0m
+[0;33mW (24590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=309286 us (309.3 ms) misses=15/23[0m
+[0;32mI (25290) PRIOMQTT_S1: PUB | seq=23 ts=24863652 us[0m
+[0;33mW (25590) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=300620 us (300.6 ms) misses=16/24[0m
+[0;32mI (26290) PRIOMQTT_S1: PUB | seq=24 ts=25863652 us[0m
+[0;33mW (26610) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=324508 us (324.5 ms) misses=17/25[0m
+[0;32mI (27290) PRIOMQTT_S1: PUB | seq=25 ts=26863652 us[0m
+[0;33mW (27640) PRIOMQTT_S1: MISS | topic=cmd/s1 rtt=351076 us (351.1 ms) misses=18/26[0m
+[0;32mI (28290) PRIOMQTT_S1: PUB | seq=26 ts=27863652 us[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download

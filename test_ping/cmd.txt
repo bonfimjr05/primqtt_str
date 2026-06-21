@@ -1,0 +1,9 @@
+#Roda o ping por 60 segundos
+timeout 60 ping -i 0.2 IP DA ESP32 > ping_carga5hz.log
+
+#Extrai os valores de RTT do ping
+grep -oP 'time=\K[0-9.]+' ping_carga5hz.log > rtt_ping_5hz.txt
+wc -l rtt_ping_5hz.txt
+
+Calcula as estatísticas
+python3 analisar_ping.py rtt_ping_5hz.txt > resultado.txt

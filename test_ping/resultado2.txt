@@ -1,0 +1,7 @@
+Arquivo: rtt_ping_5hz2.txt
+Amostras : 299
+Média    : 51.371 ms
+Mediana  : 46.500 ms
+Desvio   : 38.720 ms
+Mínimo   : 2.050 ms
+Máximo   : 223.000 ms

@@ -1,0 +1,713 @@
+Executing action: monitor
+Running idf_monitor in directory /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s3
+Executing "/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python /home/paulo/esp/v5.1.5/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB2 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s3/build/publisher_s3.elf -m '/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python' '/home/paulo/esp/v5.1.5/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB2'"...
+[0;32mI (12637) PRIOMQTT_S3: PUB | seq=50 (carga 5 Hz)[0m
+[0;32mI (12637) PRIOMQTT_S3: --- STATS S3 | pub=50 miss=1 (2.0%) rtt_avg=82.34ms rtt_max=200.57ms taxa=5Hz ---[0m
+[0;32mI (22637) PRIOMQTT_S3: PUB | seq=100 (carga 5 Hz)[0m
+[0;32mI (22647) PRIOMQTT_S3: --- STATS S3 | pub=100 miss=3 (3.0%) rtt_avg=83.80ms rtt_max=202.60ms taxa=5Hz ---[0m
+[0;32mI (32637) PRIOMQTT_S3: PUB | seq=150 (carga 5 Hz)[0m
+[0;32mI (32647) PRIOMQTT_S3: --- STATS S3 | pub=150 miss=4 (2.7%) rtt_avg=83.25ms rtt_max=202.60ms taxa=5Hz ---[0m
+[0;32mI (42637) PRIOMQTT_S3: PUB | seq=200 (carga 5 Hz)[0m
+[0;32mI (42647) PRIOMQTT_S3: --- STATS S3 | pub=200 miss=5 (2.5%) rtt_avg=81.45ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (52637) PRIOMQTT_S3: PUB | seq=250 (carga 5 Hz)[0m
+[0;32mI (52647) PRIOMQTT_S3: --- STATS S3 | pub=250 miss=5 (2.0%) rtt_avg=84.01ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (62637) PRIOMQTT_S3: PUB | seq=300 (carga 5 Hz)[0m
+[0;32mI (62647) PRIOMQTT_S3: --- STATS S3 | pub=300 miss=5 (1.7%) rtt_avg=82.70ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (72637) PRIOMQTT_S3: PUB | seq=350 (carga 5 Hz)[0m
+[0;32mI (72647) PRIOMQTT_S3: --- STATS S3 | pub=350 miss=7 (2.0%) rtt_avg=80.54ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (82637) PRIOMQTT_S3: PUB | seq=400 (carga 5 Hz)[0m
+[0;32mI (82647) PRIOMQTT_S3: --- STATS S3 | pub=399 miss=8 (2.0%) rtt_avg=80.50ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (92637) PRIOMQTT_S3: PUB | seq=450 (carga 5 Hz)[0m
+[0;32mI (92647) PRIOMQTT_S3: --- STATS S3 | pub=450 miss=8 (1.8%) rtt_avg=79.79ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (102637) PRIOMQTT_S3: PUB | seq=500 (carga 5 Hz)[0m
+[0;32mI (102647) PRIOMQTT_S3: --- STATS S3 | pub=500 miss=10 (2.0%) rtt_avg=80.45ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (112637) PRIOMQTT_S3: PUB | seq=550 (carga 5 Hz)[0m
+[0;32mI (112647) PRIOMQTT_S3: --- STATS S3 | pub=550 miss=10 (1.8%) rtt_avg=80.88ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (122637) PRIOMQTT_S3: PUB | seq=600 (carga 5 Hz)[0m
+[0;32mI (122647) PRIOMQTT_S3: --- STATS S3 | pub=599 miss=12 (2.0%) rtt_avg=80.50ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (132637) PRIOMQTT_S3: PUB | seq=650 (carga 5 Hz)[0m
+[0;32mI (132647) PRIOMQTT_S3: --- STATS S3 | pub=650 miss=14 (2.2%) rtt_avg=80.50ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (142637) PRIOMQTT_S3: PUB | seq=700 (carga 5 Hz)[0m
+[0;32mI (142647) PRIOMQTT_S3: --- STATS S3 | pub=700 miss=15 (2.1%) rtt_avg=81.04ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (152637) PRIOMQTT_S3: PUB | seq=750 (carga 5 Hz)[0m
+[0;32mI (152647) PRIOMQTT_S3: --- STATS S3 | pub=749 miss=18 (2.4%) rtt_avg=81.37ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (162637) PRIOMQTT_S3: PUB | seq=800 (carga 5 Hz)[0m
+[0;32mI (162647) PRIOMQTT_S3: --- STATS S3 | pub=800 miss=19 (2.4%) rtt_avg=81.50ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (172637) PRIOMQTT_S3: PUB | seq=850 (carga 5 Hz)[0m
+[0;32mI (172647) PRIOMQTT_S3: --- STATS S3 | pub=850 miss=19 (2.2%) rtt_avg=81.65ms rtt_max=202.81ms taxa=5Hz ---[0m
+[0;32mI (182637) PRIOMQTT_S3: PUB | seq=900 (carga 5 Hz)[0m
+[0;32mI (182647) PRIOMQTT_S3: --- STATS S3 | pub=900 miss=20 (2.2%) rtt_avg=81.93ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (192637) PRIOMQTT_S3: PUB | seq=950 (carga 5 Hz)[0m
+[0;32mI (192647) PRIOMQTT_S3: --- STATS S3 | pub=950 miss=20 (2.1%) rtt_avg=81.55ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (202637) PRIOMQTT_S3: PUB | seq=1000 (carga 5 Hz)[0m
+[0;32mI (202647) PRIOMQTT_S3: --- STATS S3 | pub=1000 miss=21 (2.1%) rtt_avg=81.89ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (212637) PRIOMQTT_S3: PUB | seq=1050 (carga 5 Hz)[0m
+[0;32mI (212647) PRIOMQTT_S3: --- STATS S3 | pub=1049 miss=23 (2.2%) rtt_avg=81.76ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (214207) wifi:<ba-add>idx:1 (ifx:0, c8:3a:35:62:ce:e5), tid:6, ssn:0, winSize:64[0m
+[0;32mI (222637) PRIOMQTT_S3: PUB | seq=1100 (carga 5 Hz)[0m
+[0;32mI (222647) PRIOMQTT_S3: --- STATS S3 | pub=1100 miss=23 (2.1%) rtt_avg=81.73ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (232637) PRIOMQTT_S3: PUB | seq=1150 (carga 5 Hz)[0m
+[0;32mI (232647) PRIOMQTT_S3: --- STATS S3 | pub=1150 miss=23 (2.0%) rtt_avg=81.98ms rtt_max=203.23ms taxa=5Hz ---[0m
+[0;32mI (242637) PRIOMQTT_S3: PUB | seq=1200 (carga 5 Hz)[0m
+[0;32mI (242647) PRIOMQTT_S3: --- STATS S3 | pub=1200 miss=24 (2.0%) rtt_avg=82.34ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (252637) PRIOMQTT_S3: PUB | seq=1250 (carga 5 Hz)[0m
+[0;32mI (252647) PRIOMQTT_S3: --- STATS S3 | pub=1250 miss=25 (2.0%) rtt_avg=82.71ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (262637) PRIOMQTT_S3: PUB | seq=1300 (carga 5 Hz)[0m
+[0;32mI (262647) PRIOMQTT_S3: --- STATS S3 | pub=1300 miss=26 (2.0%) rtt_avg=82.92ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (272637) PRIOMQTT_S3: PUB | seq=1350 (carga 5 Hz)[0m
+[0;32mI (272647) PRIOMQTT_S3: --- STATS S3 | pub=1349 miss=28 (2.1%) rtt_avg=82.86ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (282637) PRIOMQTT_S3: PUB | seq=1400 (carga 5 Hz)[0m
+[0;32mI (282647) PRIOMQTT_S3: --- STATS S3 | pub=1400 miss=29 (2.1%) rtt_avg=82.98ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (292637) PRIOMQTT_S3: PUB | seq=1450 (carga 5 Hz)[0m
+[0;32mI (292647) PRIOMQTT_S3: --- STATS S3 | pub=1450 miss=30 (2.1%) rtt_avg=83.07ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (302637) PRIOMQTT_S3: PUB | seq=1500 (carga 5 Hz)[0m
+[0;32mI (302647) PRIOMQTT_S3: --- STATS S3 | pub=1500 miss=31 (2.1%) rtt_avg=83.09ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (312637) PRIOMQTT_S3: PUB | seq=1550 (carga 5 Hz)[0m
+[0;32mI (312647) PRIOMQTT_S3: --- STATS S3 | pub=1550 miss=32 (2.1%) rtt_avg=82.93ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (322637) PRIOMQTT_S3: PUB | seq=1600 (carga 5 Hz)[0m
+[0;32mI (322647) PRIOMQTT_S3: --- STATS S3 | pub=1599 miss=32 (2.0%) rtt_avg=82.77ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (332647) PRIOMQTT_S3: --- STATS S3 | pub=1646 miss=32 (1.9%) rtt_avg=82.07ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (332657) PRIOMQTT_S3: PUB | seq=1650 (carga 5 Hz)[0m
+[0;32mI (342647) PRIOMQTT_S3: --- STATS S3 | pub=1700 miss=32 (1.9%) rtt_avg=81.80ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (342657) PRIOMQTT_S3: PUB | seq=1700 (carga 5 Hz)[0m
+[0;32mI (352647) PRIOMQTT_S3: --- STATS S3 | pub=1750 miss=32 (1.8%) rtt_avg=81.96ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (352657) PRIOMQTT_S3: PUB | seq=1750 (carga 5 Hz)[0m
+[0;32mI (362647) PRIOMQTT_S3: --- STATS S3 | pub=1799 miss=33 (1.8%) rtt_avg=81.85ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (362657) PRIOMQTT_S3: PUB | seq=1800 (carga 5 Hz)[0m
+[0;32mI (372647) PRIOMQTT_S3: --- STATS S3 | pub=1850 miss=34 (1.8%) rtt_avg=82.49ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (372657) PRIOMQTT_S3: PUB | seq=1850 (carga 5 Hz)[0m
+[0;32mI (382647) PRIOMQTT_S3: --- STATS S3 | pub=1900 miss=35 (1.8%) rtt_avg=82.87ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (382657) PRIOMQTT_S3: PUB | seq=1900 (carga 5 Hz)[0m
+[0;32mI (392647) PRIOMQTT_S3: --- STATS S3 | pub=1949 miss=35 (1.8%) rtt_avg=82.44ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (392657) PRIOMQTT_S3: PUB | seq=1950 (carga 5 Hz)[0m
+[0;32mI (402647) PRIOMQTT_S3: --- STATS S3 | pub=2000 miss=35 (1.8%) rtt_avg=82.24ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (402657) PRIOMQTT_S3: PUB | seq=2000 (carga 5 Hz)[0m
+[0;32mI (412647) PRIOMQTT_S3: --- STATS S3 | pub=2049 miss=36 (1.8%) rtt_avg=82.28ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (412657) PRIOMQTT_S3: PUB | seq=2050 (carga 5 Hz)[0m
+[0;32mI (422647) PRIOMQTT_S3: --- STATS S3 | pub=2099 miss=37 (1.8%) rtt_avg=82.19ms rtt_max=203.36ms taxa=5Hz ---[0m
+[0;32mI (422657) PRIOMQTT_S3: PUB | seq=2100 (carga 5 Hz)[0m
+[0;32mI (432647) PRIOMQTT_S3: --- STATS S3 | pub=2150 miss=38 (1.8%) rtt_avg=82.17ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (432657) PRIOMQTT_S3: PUB | seq=2150 (carga 5 Hz)[0m
+[0;32mI (442647) PRIOMQTT_S3: --- STATS S3 | pub=2199 miss=39 (1.8%) rtt_avg=82.12ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (442657) PRIOMQTT_S3: PUB | seq=2200 (carga 5 Hz)[0m
+[0;32mI (452647) PRIOMQTT_S3: --- STATS S3 | pub=2246 miss=39 (1.7%) rtt_avg=82.31ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (452657) PRIOMQTT_S3: PUB | seq=2250 (carga 5 Hz)[0m
+[0;32mI (462647) PRIOMQTT_S3: --- STATS S3 | pub=2299 miss=42 (1.8%) rtt_avg=82.47ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (462657) PRIOMQTT_S3: PUB | seq=2300 (carga 5 Hz)[0m
+[0;32mI (472647) PRIOMQTT_S3: --- STATS S3 | pub=2349 miss=42 (1.8%) rtt_avg=82.45ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (472657) PRIOMQTT_S3: PUB | seq=2350 (carga 5 Hz)[0m
+[0;32mI (482647) PRIOMQTT_S3: --- STATS S3 | pub=2400 miss=43 (1.8%) rtt_avg=82.61ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (482657) PRIOMQTT_S3: PUB | seq=2400 (carga 5 Hz)[0m
+[0;32mI (492647) PRIOMQTT_S3: --- STATS S3 | pub=2450 miss=45 (1.8%) rtt_avg=82.60ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (492657) PRIOMQTT_S3: PUB | seq=2450 (carga 5 Hz)[0m
+[0;32mI (502647) PRIOMQTT_S3: --- STATS S3 | pub=2499 miss=45 (1.8%) rtt_avg=82.76ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (502657) PRIOMQTT_S3: PUB | seq=2500 (carga 5 Hz)[0m
+[0;32mI (512647) PRIOMQTT_S3: --- STATS S3 | pub=2550 miss=46 (1.8%) rtt_avg=82.84ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (512657) PRIOMQTT_S3: PUB | seq=2550 (carga 5 Hz)[0m
+[0;32mI (522647) PRIOMQTT_S3: --- STATS S3 | pub=2600 miss=49 (1.9%) rtt_avg=82.89ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (522667) PRIOMQTT_S3: PUB | seq=2600 (carga 5 Hz)[0m
+[0;32mI (532647) PRIOMQTT_S3: --- STATS S3 | pub=2649 miss=50 (1.9%) rtt_avg=83.23ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (532667) PRIOMQTT_S3: PUB | seq=2650 (carga 5 Hz)[0m
+[0;32mI (542647) PRIOMQTT_S3: --- STATS S3 | pub=2699 miss=52 (1.9%) rtt_avg=83.36ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (542667) PRIOMQTT_S3: PUB | seq=2700 (carga 5 Hz)[0m
+[0;32mI (552647) PRIOMQTT_S3: --- STATS S3 | pub=2750 miss=53 (1.9%) rtt_avg=83.08ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (552667) PRIOMQTT_S3: PUB | seq=2750 (carga 5 Hz)[0m
+[0;32mI (562647) PRIOMQTT_S3: --- STATS S3 | pub=2799 miss=53 (1.9%) rtt_avg=83.21ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (562667) PRIOMQTT_S3: PUB | seq=2800 (carga 5 Hz)[0m
+[0;32mI (572647) PRIOMQTT_S3: --- STATS S3 | pub=2849 miss=54 (1.9%) rtt_avg=83.03ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (572677) PRIOMQTT_S3: PUB | seq=2850 (carga 5 Hz)[0m
+[0;32mI (582647) PRIOMQTT_S3: --- STATS S3 | pub=2900 miss=55 (1.9%) rtt_avg=83.14ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (582677) PRIOMQTT_S3: PUB | seq=2900 (carga 5 Hz)[0m
+[0;32mI (592647) PRIOMQTT_S3: --- STATS S3 | pub=2949 miss=56 (1.9%) rtt_avg=83.06ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (592677) PRIOMQTT_S3: PUB | seq=2950 (carga 5 Hz)[0m
+[0;32mI (602647) PRIOMQTT_S3: --- STATS S3 | pub=2999 miss=59 (2.0%) rtt_avg=83.09ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (602677) PRIOMQTT_S3: PUB | seq=3000 (carga 5 Hz)[0m
+[0;32mI (612647) PRIOMQTT_S3: --- STATS S3 | pub=3041 miss=60 (2.0%) rtt_avg=83.26ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (612677) PRIOMQTT_S3: PUB | seq=3050 (carga 5 Hz)[0m
+[0;32mI (622647) PRIOMQTT_S3: --- STATS S3 | pub=3099 miss=61 (2.0%) rtt_avg=83.68ms rtt_max=203.81ms taxa=5Hz ---[0m
+[0;32mI (622677) PRIOMQTT_S3: PUB | seq=3100 (carga 5 Hz)[0m
+[0;32mI (632647) PRIOMQTT_S3: --- STATS S3 | pub=3149 miss=63 (2.0%) rtt_avg=83.68ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (632677) PRIOMQTT_S3: PUB | seq=3150 (carga 5 Hz)[0m
+[0;32mI (642647) PRIOMQTT_S3: --- STATS S3 | pub=3197 miss=64 (2.0%) rtt_avg=83.90ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (642677) PRIOMQTT_S3: PUB | seq=3200 (carga 5 Hz)[0m
+[0;32mI (652647) PRIOMQTT_S3: --- STATS S3 | pub=3249 miss=68 (2.1%) rtt_avg=83.93ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (652677) PRIOMQTT_S3: PUB | seq=3250 (carga 5 Hz)[0m
+[0;32mI (662647) PRIOMQTT_S3: --- STATS S3 | pub=3300 miss=70 (2.1%) rtt_avg=84.32ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (662677) PRIOMQTT_S3: PUB | seq=3300 (carga 5 Hz)[0m
+[0;32mI (672647) PRIOMQTT_S3: --- STATS S3 | pub=3350 miss=72 (2.1%) rtt_avg=84.43ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (672677) PRIOMQTT_S3: PUB | seq=3350 (carga 5 Hz)[0m
+[0;32mI (682647) PRIOMQTT_S3: --- STATS S3 | pub=3399 miss=73 (2.1%) rtt_avg=84.42ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (682677) PRIOMQTT_S3: PUB | seq=3400 (carga 5 Hz)[0m
+[0;32mI (692647) PRIOMQTT_S3: --- STATS S3 | pub=3450 miss=75 (2.2%) rtt_avg=84.47ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (692677) PRIOMQTT_S3: PUB | seq=3450 (carga 5 Hz)[0m
+[0;32mI (702647) PRIOMQTT_S3: --- STATS S3 | pub=3500 miss=77 (2.2%) rtt_avg=84.55ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (702677) PRIOMQTT_S3: PUB | seq=3500 (carga 5 Hz)[0m
+[0;32mI (712647) PRIOMQTT_S3: --- STATS S3 | pub=3549 miss=77 (2.2%) rtt_avg=84.94ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (712677) PRIOMQTT_S3: PUB | seq=3550 (carga 5 Hz)[0m
+[0;32mI (722647) PRIOMQTT_S3: --- STATS S3 | pub=3599 miss=79 (2.2%) rtt_avg=85.01ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (722687) PRIOMQTT_S3: PUB | seq=3600 (carga 5 Hz)[0m
+[0;32mI (732647) PRIOMQTT_S3: --- STATS S3 | pub=3650 miss=80 (2.2%) rtt_avg=84.84ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (732687) PRIOMQTT_S3: PUB | seq=3650 (carga 5 Hz)[0m
+[0;32mI (742647) PRIOMQTT_S3: --- STATS S3 | pub=3699 miss=82 (2.2%) rtt_avg=84.63ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (742707) PRIOMQTT_S3: PUB | seq=3700 (carga 5 Hz)[0m
+[0;32mI (752647) PRIOMQTT_S3: --- STATS S3 | pub=3750 miss=82 (2.2%) rtt_avg=84.79ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (752717) PRIOMQTT_S3: PUB | seq=3750 (carga 5 Hz)[0m
+[0;32mI (762647) PRIOMQTT_S3: --- STATS S3 | pub=3799 miss=82 (2.2%) rtt_avg=84.76ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (762717) PRIOMQTT_S3: PUB | seq=3800 (carga 5 Hz)[0m
+[0;32mI (772647) PRIOMQTT_S3: --- STATS S3 | pub=3847 miss=83 (2.2%) rtt_avg=85.03ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (772727) PRIOMQTT_S3: PUB | seq=3850 (carga 5 Hz)[0m
+[0;32mI (782647) PRIOMQTT_S3: --- STATS S3 | pub=3900 miss=83 (2.1%) rtt_avg=85.15ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (782727) PRIOMQTT_S3: PUB | seq=3900 (carga 5 Hz)[0m
+[0;32mI (792647) PRIOMQTT_S3: --- STATS S3 | pub=3949 miss=84 (2.1%) rtt_avg=85.07ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (792727) PRIOMQTT_S3: PUB | seq=3950 (carga 5 Hz)[0m
+[0;32mI (802647) PRIOMQTT_S3: --- STATS S3 | pub=3999 miss=85 (2.1%) rtt_avg=85.32ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (802727) PRIOMQTT_S3: PUB | seq=4000 (carga 5 Hz)[0m
+[0;32mI (812647) PRIOMQTT_S3: --- STATS S3 | pub=4043 miss=86 (2.1%) rtt_avg=85.34ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (812727) PRIOMQTT_S3: PUB | seq=4050 (carga 5 Hz)[0m
+[0;32mI (822647) PRIOMQTT_S3: --- STATS S3 | pub=4099 miss=86 (2.1%) rtt_avg=85.21ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (822727) PRIOMQTT_S3: PUB | seq=4100 (carga 5 Hz)[0m
+[0;32mI (832647) PRIOMQTT_S3: --- STATS S3 | pub=4150 miss=86 (2.1%) rtt_avg=85.10ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (832727) PRIOMQTT_S3: PUB | seq=4150 (carga 5 Hz)[0m
+[0;32mI (842647) PRIOMQTT_S3: --- STATS S3 | pub=4196 miss=87 (2.1%) rtt_avg=85.23ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (842727) PRIOMQTT_S3: PUB | seq=4200 (carga 5 Hz)[0m
+[0;32mI (852647) PRIOMQTT_S3: --- STATS S3 | pub=4249 miss=87 (2.0%) rtt_avg=85.20ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (852727) PRIOMQTT_S3: PUB | seq=4250 (carga 5 Hz)[0m
+[0;32mI (862647) PRIOMQTT_S3: --- STATS S3 | pub=4299 miss=88 (2.0%) rtt_avg=85.25ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (862727) PRIOMQTT_S3: PUB | seq=4300 (carga 5 Hz)[0m
+[0;32mI (872647) PRIOMQTT_S3: --- STATS S3 | pub=4349 miss=88 (2.0%) rtt_avg=85.57ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (872727) PRIOMQTT_S3: PUB | seq=4350 (carga 5 Hz)[0m
+[0;32mI (882647) PRIOMQTT_S3: --- STATS S3 | pub=4400 miss=88 (2.0%) rtt_avg=85.53ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (882727) PRIOMQTT_S3: PUB | seq=4400 (carga 5 Hz)[0m
+[0;32mI (892647) PRIOMQTT_S3: --- STATS S3 | pub=4450 miss=89 (2.0%) rtt_avg=85.54ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (892727) PRIOMQTT_S3: PUB | seq=4450 (carga 5 Hz)[0m
+[0;32mI (902647) PRIOMQTT_S3: --- STATS S3 | pub=4499 miss=89 (2.0%) rtt_avg=85.60ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (902727) PRIOMQTT_S3: PUB | seq=4500 (carga 5 Hz)[0m
+[0;32mI (912647) PRIOMQTT_S3: --- STATS S3 | pub=4550 miss=91 (2.0%) rtt_avg=85.60ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (912727) PRIOMQTT_S3: PUB | seq=4550 (carga 5 Hz)[0m
+[0;32mI (922647) PRIOMQTT_S3: --- STATS S3 | pub=4599 miss=92 (2.0%) rtt_avg=85.51ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (922727) PRIOMQTT_S3: PUB | seq=4600 (carga 5 Hz)[0m
+[0;32mI (932647) PRIOMQTT_S3: --- STATS S3 | pub=4649 miss=92 (2.0%) rtt_avg=85.71ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (932727) PRIOMQTT_S3: PUB | seq=4650 (carga 5 Hz)[0m
+[0;32mI (942647) PRIOMQTT_S3: --- STATS S3 | pub=4699 miss=93 (2.0%) rtt_avg=85.61ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (942727) PRIOMQTT_S3: PUB | seq=4700 (carga 5 Hz)[0m
+[0;32mI (952647) PRIOMQTT_S3: --- STATS S3 | pub=4749 miss=95 (2.0%) rtt_avg=85.62ms rtt_max=204.32ms taxa=5Hz ---[0m
+[0;32mI (952727) PRIOMQTT_S3: PUB | seq=4750 (carga 5 Hz)[0m
+[0;32mI (962647) PRIOMQTT_S3: --- STATS S3 | pub=4799 miss=96 (2.0%) rtt_avg=85.67ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (962727) PRIOMQTT_S3: PUB | seq=4800 (carga 5 Hz)[0m
+[0;32mI (972647) PRIOMQTT_S3: --- STATS S3 | pub=4849 miss=96 (2.0%) rtt_avg=85.64ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (972727) PRIOMQTT_S3: PUB | seq=4850 (carga 5 Hz)[0m
+[0;32mI (1211397) PRIOMQTT_S3: Conectado ao broker MQTT.[0m
+[0;32mI (1211397) PRIOMQTT_S3: Subscrito em cmd/s3[0m
+[0;32mI (1212647) PRIOMQTT_S3: --- STATS S3 | pub=4898 miss=97 (2.0%) rtt_avg=85.86ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1212807) PRIOMQTT_S3: PUB | seq=4950 (carga 5 Hz)[0m
+[0;31mE (1222027) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (1222027) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (1222037) PRIOMQTT_S3: Erro MQTT.[0m
+[0;31mE (1222037) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (1222047) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1222647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1232057) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1232057) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1232067) mqtt_client: Error transport connect[0m
+[0;31mE (1232067) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1232077) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1232647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1242647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1247107) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1247107) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1247107) mqtt_client: Error transport connect[0m
+[0;31mE (1247117) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1247117) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1252647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1262137) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1262137) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1262147) mqtt_client: Error transport connect[0m
+[0;31mE (1262147) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1262147) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1262647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1272647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1277307) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1277307) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1277307) mqtt_client: Error transport connect[0m
+[0;31mE (1277317) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1277317) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1282647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1287357) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1287357) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1287357) mqtt_client: Error transport connect[0m
+[0;31mE (1287367) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1287367) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1292647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1297577) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1297577) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1297587) mqtt_client: Error transport connect[0m
+[0;31mE (1297587) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1297597) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1302647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1312647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1312647) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1312647) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1312657) mqtt_client: Error transport connect[0m
+[0;31mE (1312667) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1312667) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1322647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1322867) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1322877) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1322877) mqtt_client: Error transport connect[0m
+[0;31mE (1322877) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1322887) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1332647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1337937) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1337937) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1337947) mqtt_client: Error transport connect[0m
+[0;31mE (1337947) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1337947) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1342647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1352647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1352987) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1352987) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1352997) mqtt_client: Error transport connect[0m
+[0;31mE (1352997) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1353007) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1362647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1368047) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1368047) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1368047) mqtt_client: Error transport connect[0m
+[0;31mE (1368057) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1368057) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1372647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1378267) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1378277) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1378277) mqtt_client: Error transport connect[0m
+[0;31mE (1378277) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1378287) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1382647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1392647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1393337) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1393337) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1393347) mqtt_client: Error transport connect[0m
+[0;31mE (1393347) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1393357) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1402647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1408367) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1408367) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1408367) mqtt_client: Error transport connect[0m
+[0;31mE (1408377) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1408377) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1412647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1418437) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1418437) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1418437) mqtt_client: Error transport connect[0m
+[0;31mE (1418447) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1418447) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1422647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1428647) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1428657) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1428657) mqtt_client: Error transport connect[0m
+[0;31mE (1428657) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1428667) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1432647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;32mI (1442647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1443677) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1443677) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1443677) mqtt_client: Error transport connect[0m
+[0;31mE (1443687) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1443687) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (1452647) PRIOMQTT_S3: --- STATS S3 | pub=4945 miss=98 (2.0%) rtt_avg=85.91ms rtt_max=204.52ms taxa=5Hz ---[0m
+[0;31mE (1453707) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (1453707) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (1453707) mqtt_client: Error transport connect[0m
+[0;31mE (1453717) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (1453717) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu up.[0m
+[0;32mI (460) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     publisher_s3[0m
+[0;32mI (487) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Jun 17 2026 23:16:53[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  b69402f7cb8126b3...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (510) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;32mI (573) app_start: Starting scheduler on CPU0[0m
+[0;32mI (577) app_start: Starting scheduler on CPU1[0m
+[0;32mI (577) main_task: Started on CPU0[0m
+[0;32mI (587) main_task: Calling app_main()[0m
+[0;32mI (607) PRIOMQTT_S3: === PrioMQTT S3 (carga de fundo) ===[0m
+[0;32mI (607) PRIOMQTT_S3: Broker: 192.168.1.24:1883[0m
+[0;32mI (607) PRIOMQTT_S3: Taxa: 5 Hz[0m
+[0;32mI (627) wifi:wifi driver task: 3ffc0378, prio:23, stack:6656, core=0[0m
+[0;32mI (637) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (637) wifi:wifi certification version: v7.0[0m
+[0;32mI (637) wifi:config NVS flash: enabled[0m
+[0;32mI (637) wifi:config nano formating: disabled[0m
+[0;32mI (637) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (647) wifi:Init management short buffer num: 32[0m
+[0;32mI (657) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (657) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (667) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5760[0m
+[0;32mI (687) wifi_init: tcp rx win: 5760[0m
+[0;32mI (697) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (707) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (707) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (717) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (797) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (867) wifi:mode : sta (0c:8b:95:32:7a:24)[0m
+[0;32mI (877) wifi:enable tsf[0m
+[0;32mI (877) PRIOMQTT_S3: Aguardando conexao Wi-Fi...[0m
+[0;32mI (887) wifi:new:<3,1>, old:<1,0>, ap:<255,255>, sta:<3,1>, prof:1[0m
+[0;32mI (887) wifi:state: init -> auth (b0)[0m
+[0;32mI (897) wifi:state: auth -> assoc (0)[0m
+[0;32mI (907) wifi:state: assoc -> run (10)[0m
+[0;32mI (927) wifi:connected with .:Bahiatelecom:. Ray, aid = 2, channel 3, 40U, bssid = c8:3a:35:62:ce:e5[0m
+[0;32mI (927) wifi:security: WPA2-PSK, phy: bgn, rssi: -70[0m
+[0;32mI (927) wifi:pm start, type: 1[0m
+
+[0;32mI (927) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (937) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1937) esp_netif_handlers: sta ip: 192.168.1.14, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1937) PRIOMQTT_S3: IP obtido: 192.168.1.14[0m
+[0;32mI (1937) PRIOMQTT_S3: Wi-Fi conectado.[0m
+[0;32mI (1947) PRIOMQTT_S3: Aguardando conexao MQTT...[0m
+[0;32mI (1967) wifi:<ba-add>idx:0 (ifx:0, c8:3a:35:62:ce:e5), tid:0, ssn:2, winSize:64[0m
+[0;31mE (2277) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2277) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (2277) mqtt_client: Error transport connect[0m
+[0;31mE (2287) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (2287) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (3517) wifi:<ba-add>idx:1 (ifx:0, c8:3a:35:62:ce:e5), tid:6, ssn:0, winSize:64[0m
+[0;31mE (12307) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (12317) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (12317) mqtt_client: Error transport connect[0m
+[0;31mE (12317) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (12327) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (27347) PRIOMQTT_S3: Conectado ao broker MQTT.[0m
+[0;32mI (27347) PRIOMQTT_S3: Subscrito em cmd/s3[0m
+[0;32mI (27347) PRIOMQTT_S3: Taxa de carga configurada: 5 Hz (periodo 200 ms)[0m
+[0;32mI (27357) PRIOMQTT_S3: PUB | seq=0 (carga 5 Hz)[0m
+[0;32mI (27357) main_task: Returned from app_main()[0m
+[0;32mI (37357) PRIOMQTT_S3: PUB | seq=50 (carga 5 Hz)[0m
+[0;32mI (37357) PRIOMQTT_S3: --- STATS S3 | pub=27 miss=0 (0.0%) rtt_avg=95.29ms rtt_max=193.88ms taxa=5Hz ---[0m
+[0;32mI (47357) PRIOMQTT_S3: PUB | seq=100 (carga 5 Hz)[0m
+[0;32mI (47357) PRIOMQTT_S3: --- STATS S3 | pub=77 miss=0 (0.0%) rtt_avg=94.93ms rtt_max=198.92ms taxa=5Hz ---[0m
+[0;32mI (57357) PRIOMQTT_S3: PUB | seq=150 (carga 5 Hz)[0m
+[0;32mI (57357) PRIOMQTT_S3: --- STATS S3 | pub=126 miss=2 (1.6%) rtt_avg=98.58ms rtt_max=202.37ms taxa=5Hz ---[0m
+[0;32mI (67357) PRIOMQTT_S3: PUB | seq=200 (carga 5 Hz)[0m
+[0;32mI (67367) PRIOMQTT_S3: --- STATS S3 | pub=177 miss=2 (1.1%) rtt_avg=95.39ms rtt_max=202.37ms taxa=5Hz ---[0m
+[0;32mI (77357) PRIOMQTT_S3: PUB | seq=250 (carga 5 Hz)[0m
+[0;32mI (77367) PRIOMQTT_S3: --- STATS S3 | pub=227 miss=3 (1.3%) rtt_avg=93.68ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (87357) PRIOMQTT_S3: PUB | seq=300 (carga 5 Hz)[0m
+[0;32mI (87367) PRIOMQTT_S3: --- STATS S3 | pub=277 miss=4 (1.4%) rtt_avg=97.64ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (97357) PRIOMQTT_S3: PUB | seq=350 (carga 5 Hz)[0m
+[0;32mI (97367) PRIOMQTT_S3: --- STATS S3 | pub=327 miss=5 (1.5%) rtt_avg=98.53ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (107357) PRIOMQTT_S3: PUB | seq=400 (carga 5 Hz)[0m
+[0;32mI (107367) PRIOMQTT_S3: --- STATS S3 | pub=377 miss=6 (1.6%) rtt_avg=99.61ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (111577) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (111577) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (111587) PRIOMQTT_S3: Erro MQTT.[0m
+[0;31mE (111587) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (111597) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (117367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (126897) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (126897) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (126897) mqtt_client: Error transport connect[0m
+[0;31mE (126907) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (126907) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (127367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (136947) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (136947) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (136947) mqtt_client: Error transport connect[0m
+[0;31mE (136957) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (136957) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (137367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (147097) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (147097) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (147097) mqtt_client: Error transport connect[0m
+[0;31mE (147107) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (147107) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (147367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (157307) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (157317) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (157317) mqtt_client: Error transport connect[0m
+[0;31mE (157317) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (157327) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (157367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (167367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (172377) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (172377) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (172377) mqtt_client: Error transport connect[0m
+[0;31mE (172387) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (172387) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (177367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (182607) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (182607) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (182607) mqtt_client: Error transport connect[0m
+[0;31mE (182617) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (182617) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (187367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (192667) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (192677) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (192677) mqtt_client: Error transport connect[0m
+[0;31mE (192677) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (192687) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (197367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (207367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (207687) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (207697) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (207697) mqtt_client: Error transport connect[0m
+[0;31mE (207697) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (207707) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (217367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (222717) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (222717) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (222717) mqtt_client: Error transport connect[0m
+[0;31mE (222727) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (222727) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (227367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (232737) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (232747) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (232747) mqtt_client: Error transport connect[0m
+[0;31mE (232747) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (232757) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (237367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;32mI (247367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (247947) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (247947) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (247947) mqtt_client: Error transport connect[0m
+[0;31mE (247957) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (247957) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (257367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (258177) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (258177) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (258177) mqtt_client: Error transport connect[0m
+[0;31mE (258187) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (258187) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (267367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (268417) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (268417) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (268417) mqtt_client: Error transport connect[0m
+[0;31mE (268427) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (268427) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (277367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (278467) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (278467) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (278477) mqtt_client: Error transport connect[0m
+[0;31mE (278477) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (278477) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (287367) PRIOMQTT_S3: --- STATS S3 | pub=398 miss=7 (1.8%) rtt_avg=100.21ms rtt_max=203.21ms taxa=5Hz ---[0m
+[0;31mE (293517) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (293517) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (293517) mqtt_client: Error transport connect[0m
+[0;31mE (293527) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (293527) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (797) wifi:mode : sta (0c:8b:95:32:7a:24)[0m
+[0;32mI (797) wifi:enable tsf[0m
+[0;32mI (807) PRIOMQTT_S3: Aguardando conexao Wi-Fi...[0m
+[0;32mI (817) wifi:new:<3,1>, old:<1,0>, ap:<255,255>, sta:<3,1>, prof:1[0m
+[0;32mI (817) wifi:state: init -> auth (b0)[0m
+[0;32mI (827) wifi:state: auth -> assoc (0)[0m
+[0;32mI (837) wifi:state: assoc -> run (10)[0m
+[0;32mI (857) wifi:connected with .:Bahiatelecom:. Ray, aid = 2, channel 3, 40U, bssid = c8:3a:35:62:ce:e5[0m
+[0;32mI (857) wifi:security: WPA2-PSK, phy: bgn, rssi: -82[0m
+[0;32mI (857) wifi:pm start, type: 1[0m
+
+[0;32mI (857) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (867) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1287) wifi:<ba-add>idx:0 (ifx:0, c8:3a:35:62:ce:e5), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1877) esp_netif_handlers: sta ip: 192.168.1.14, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1877) PRIOMQTT_S3: IP obtido: 192.168.1.14[0m
+[0;32mI (1877) PRIOMQTT_S3: Wi-Fi conectado.[0m
+[0;32mI (1887) PRIOMQTT_S3: Aguardando conexao MQTT...[0m
+[0;31mE (2827) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (2827) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (2827) mqtt_client: Error transport connect[0m
+[0;31mE (2837) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (2837) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (7127) wifi:<ba-add>idx:1 (ifx:0, c8:3a:35:62:ce:e5), tid:6, ssn:0, winSize:64[0m
+[0;31mE (13057) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (13057) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (13067) mqtt_client: Error transport connect[0m
+[0;31mE (13067) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (13067) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;31mE (28127) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[0;31mE (28127) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (28127) mqtt_client: Error transport connect[0m
+[0;31mE (28137) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (28137) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (38167) PRIOMQTT_S3: Conectado ao broker MQTT.[0m
+[0;32mI (38167) PRIOMQTT_S3: Subscrito em cmd/s3[0m
+[0;32mI (38167) PRIOMQTT_S3: Taxa de carga configurada: 5 Hz (periodo 200 ms)[0m
+[0;32mI (38177) main_task: Returned from app_main()[0m
+[0;32mI (38177) PRIOMQTT_S3: PUB | seq=0 (carga 5 Hz)[0m
+[0;32mI (48177) PRIOMQTT_S3: PUB | seq=50 (carga 5 Hz)[0m
+[0;32mI (48177) PRIOMQTT_S3: --- STATS S3 | pub=25 miss=2 (8.0%) rtt_avg=99.32ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (58177) PRIOMQTT_S3: PUB | seq=100 (carga 5 Hz)[0m
+[0;32mI (58187) PRIOMQTT_S3: --- STATS S3 | pub=76 miss=2 (2.6%) rtt_avg=89.06ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (68177) PRIOMQTT_S3: PUB | seq=150 (carga 5 Hz)[0m
+[0;32mI (68187) PRIOMQTT_S3: --- STATS S3 | pub=126 miss=3 (2.4%) rtt_avg=90.19ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (78177) PRIOMQTT_S3: PUB | seq=200 (carga 5 Hz)[0m
+[0;32mI (78187) PRIOMQTT_S3: --- STATS S3 | pub=175 miss=5 (2.9%) rtt_avg=87.10ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (88177) PRIOMQTT_S3: PUB | seq=250 (carga 5 Hz)[0m
+[0;32mI (88187) PRIOMQTT_S3: --- STATS S3 | pub=225 miss=5 (2.2%) rtt_avg=84.45ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (98177) PRIOMQTT_S3: PUB | seq=300 (carga 5 Hz)[0m
+[0;32mI (98187) PRIOMQTT_S3: --- STATS S3 | pub=276 miss=6 (2.2%) rtt_avg=85.53ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (108177) PRIOMQTT_S3: PUB | seq=350 (carga 5 Hz)[0m
+[0;32mI (108187) PRIOMQTT_S3: --- STATS S3 | pub=326 miss=6 (1.8%) rtt_avg=84.37ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (118177) PRIOMQTT_S3: PUB | seq=400 (carga 5 Hz)[0m
+[0;32mI (118187) PRIOMQTT_S3: --- STATS S3 | pub=376 miss=7 (1.9%) rtt_avg=82.81ms rtt_max=203.48ms taxa=5Hz ---[0m
+[0;32mI (128187) PRIOMQTT_S3: PUB | seq=450 (carga 5 Hz)[0m
+[0;32mI (128187) PRIOMQTT_S3: --- STATS S3 | pub=426 miss=8 (1.9%) rtt_avg=83.32ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (138187) PRIOMQTT_S3: PUB | seq=500 (carga 5 Hz)[0m
+[0;32mI (138187) PRIOMQTT_S3: --- STATS S3 | pub=475 miss=10 (2.1%) rtt_avg=82.92ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (148187) PRIOMQTT_S3: PUB | seq=550 (carga 5 Hz)[0m
+[0;32mI (148197) PRIOMQTT_S3: --- STATS S3 | pub=526 miss=10 (1.9%) rtt_avg=82.27ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (158187) PRIOMQTT_S3: PUB | seq=600 (carga 5 Hz)[0m
+[0;32mI (158197) PRIOMQTT_S3: --- STATS S3 | pub=576 miss=12 (2.1%) rtt_avg=82.44ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (168187) PRIOMQTT_S3: PUB | seq=650 (carga 5 Hz)[0m
+[0;32mI (168197) PRIOMQTT_S3: --- STATS S3 | pub=625 miss=13 (2.1%) rtt_avg=82.08ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (178187) PRIOMQTT_S3: PUB | seq=700 (carga 5 Hz)[0m
+[0;32mI (178197) PRIOMQTT_S3: --- STATS S3 | pub=676 miss=13 (1.9%) rtt_avg=81.83ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (188187) PRIOMQTT_S3: PUB | seq=750 (carga 5 Hz)[0m
+[0;32mI (188197) PRIOMQTT_S3: --- STATS S3 | pub=726 miss=15 (2.1%) rtt_avg=83.02ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (198187) PRIOMQTT_S3: PUB | seq=800 (carga 5 Hz)[0m
+[0;32mI (198197) PRIOMQTT_S3: --- STATS S3 | pub=776 miss=15 (1.9%) rtt_avg=82.71ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (208187) PRIOMQTT_S3: PUB | seq=850 (carga 5 Hz)[0m
+[0;32mI (208197) PRIOMQTT_S3: --- STATS S3 | pub=826 miss=16 (1.9%) rtt_avg=82.78ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (218187) PRIOMQTT_S3: PUB | seq=900 (carga 5 Hz)[0m
+[0;32mI (218197) PRIOMQTT_S3: --- STATS S3 | pub=876 miss=16 (1.8%) rtt_avg=82.85ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (228187) PRIOMQTT_S3: PUB | seq=950 (carga 5 Hz)[0m
+[0;32mI (228197) PRIOMQTT_S3: --- STATS S3 | pub=926 miss=17 (1.8%) rtt_avg=82.76ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (238187) PRIOMQTT_S3: PUB | seq=1000 (carga 5 Hz)[0m
+[0;32mI (238197) PRIOMQTT_S3: --- STATS S3 | pub=976 miss=17 (1.7%) rtt_avg=81.24ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (248187) PRIOMQTT_S3: PUB | seq=1050 (carga 5 Hz)[0m
+[0;32mI (248197) PRIOMQTT_S3: --- STATS S3 | pub=1026 miss=18 (1.8%) rtt_avg=81.71ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (258187) PRIOMQTT_S3: PUB | seq=1100 (carga 5 Hz)[0m
+[0;32mI (258197) PRIOMQTT_S3: --- STATS S3 | pub=1076 miss=19 (1.8%) rtt_avg=81.72ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (268187) PRIOMQTT_S3: PUB | seq=1150 (carga 5 Hz)[0m
+[0;32mI (268197) PRIOMQTT_S3: --- STATS S3 | pub=1126 miss=21 (1.9%) rtt_avg=82.47ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (278187) PRIOMQTT_S3: PUB | seq=1200 (carga 5 Hz)[0m
+[0;32mI (278197) PRIOMQTT_S3: --- STATS S3 | pub=1176 miss=21 (1.8%) rtt_avg=82.34ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (288187) PRIOMQTT_S3: PUB | seq=1250 (carga 5 Hz)[0m
+[0;32mI (288197) PRIOMQTT_S3: --- STATS S3 | pub=1226 miss=23 (1.9%) rtt_avg=82.42ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (298187) PRIOMQTT_S3: PUB | seq=1300 (carga 5 Hz)[0m
+[0;32mI (298197) PRIOMQTT_S3: --- STATS S3 | pub=1276 miss=23 (1.8%) rtt_avg=82.82ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (308187) PRIOMQTT_S3: PUB | seq=1350 (carga 5 Hz)[0m
+[0;32mI (308197) PRIOMQTT_S3: --- STATS S3 | pub=1326 miss=24 (1.8%) rtt_avg=83.22ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (318187) PRIOMQTT_S3: PUB | seq=1400 (carga 5 Hz)[0m
+[0;32mI (318197) PRIOMQTT_S3: --- STATS S3 | pub=1376 miss=26 (1.9%) rtt_avg=83.15ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (328187) PRIOMQTT_S3: PUB | seq=1450 (carga 5 Hz)[0m
+[0;32mI (328197) PRIOMQTT_S3: --- STATS S3 | pub=1426 miss=27 (1.9%) rtt_avg=83.39ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (338187) PRIOMQTT_S3: PUB | seq=1500 (carga 5 Hz)[0m
+[0;32mI (338197) PRIOMQTT_S3: --- STATS S3 | pub=1476 miss=27 (1.8%) rtt_avg=83.17ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (348187) PRIOMQTT_S3: PUB | seq=1550 (carga 5 Hz)[0m
+[0;32mI (348197) PRIOMQTT_S3: --- STATS S3 | pub=1526 miss=28 (1.8%) rtt_avg=83.30ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (358187) PRIOMQTT_S3: PUB | seq=1600 (carga 5 Hz)[0m
+[0;32mI (358197) PRIOMQTT_S3: --- STATS S3 | pub=1576 miss=30 (1.9%) rtt_avg=83.69ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (368187) PRIOMQTT_S3: PUB | seq=1650 (carga 5 Hz)[0m
+[0;32mI (368197) PRIOMQTT_S3: --- STATS S3 | pub=1626 miss=31 (1.9%) rtt_avg=84.30ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (378187) PRIOMQTT_S3: PUB | seq=1700 (carga 5 Hz)[0m
+[0;32mI (378197) PRIOMQTT_S3: --- STATS S3 | pub=1676 miss=33 (2.0%) rtt_avg=84.11ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (388187) PRIOMQTT_S3: PUB | seq=1750 (carga 5 Hz)[0m
+[0;32mI (388197) PRIOMQTT_S3: --- STATS S3 | pub=1726 miss=33 (1.9%) rtt_avg=84.19ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (398187) PRIOMQTT_S3: PUB | seq=1800 (carga 5 Hz)[0m
+[0;32mI (398197) PRIOMQTT_S3: --- STATS S3 | pub=1776 miss=35 (2.0%) rtt_avg=84.21ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (408187) PRIOMQTT_S3: PUB | seq=1850 (carga 5 Hz)[0m
+[0;32mI (408197) PRIOMQTT_S3: --- STATS S3 | pub=1826 miss=37 (2.0%) rtt_avg=84.01ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (418187) PRIOMQTT_S3: PUB | seq=1900 (carga 5 Hz)[0m
+[0;32mI (418197) PRIOMQTT_S3: --- STATS S3 | pub=1876 miss=37 (2.0%) rtt_avg=84.17ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (428187) PRIOMQTT_S3: PUB | seq=1950 (carga 5 Hz)[0m
+[0;32mI (428197) PRIOMQTT_S3: --- STATS S3 | pub=1926 miss=39 (2.0%) rtt_avg=84.64ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (438187) PRIOMQTT_S3: PUB | seq=2000 (carga 5 Hz)[0m
+[0;32mI (438197) PRIOMQTT_S3: --- STATS S3 | pub=1976 miss=40 (2.0%) rtt_avg=84.64ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (448187) PRIOMQTT_S3: PUB | seq=2050 (carga 5 Hz)[0m
+[0;32mI (448197) PRIOMQTT_S3: --- STATS S3 | pub=2026 miss=42 (2.1%) rtt_avg=84.94ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (458187) PRIOMQTT_S3: PUB | seq=2100 (carga 5 Hz)[0m
+[0;32mI (458197) PRIOMQTT_S3: --- STATS S3 | pub=2076 miss=42 (2.0%) rtt_avg=84.84ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (468187) PRIOMQTT_S3: PUB | seq=2150 (carga 5 Hz)[0m
+[0;32mI (468197) PRIOMQTT_S3: --- STATS S3 | pub=2126 miss=43 (2.0%) rtt_avg=84.40ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (478187) PRIOMQTT_S3: PUB | seq=2200 (carga 5 Hz)[0m
+[0;32mI (478197) PRIOMQTT_S3: --- STATS S3 | pub=2176 miss=44 (2.0%) rtt_avg=84.66ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (488187) PRIOMQTT_S3: PUB | seq=2250 (carga 5 Hz)[0m
+[0;32mI (488197) PRIOMQTT_S3: --- STATS S3 | pub=2226 miss=45 (2.0%) rtt_avg=84.66ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (498187) PRIOMQTT_S3: PUB | seq=2300 (carga 5 Hz)[0m
+[0;32mI (498197) PRIOMQTT_S3: --- STATS S3 | pub=2276 miss=46 (2.0%) rtt_avg=84.84ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (508187) PRIOMQTT_S3: PUB | seq=2350 (carga 5 Hz)[0m
+[0;32mI (508197) PRIOMQTT_S3: --- STATS S3 | pub=2326 miss=46 (2.0%) rtt_avg=85.16ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (518187) PRIOMQTT_S3: PUB | seq=2400 (carga 5 Hz)[0m
+[0;32mI (518197) PRIOMQTT_S3: --- STATS S3 | pub=2376 miss=47 (2.0%) rtt_avg=85.29ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (528187) PRIOMQTT_S3: PUB | seq=2450 (carga 5 Hz)[0m
+[0;32mI (528197) PRIOMQTT_S3: --- STATS S3 | pub=2426 miss=48 (2.0%) rtt_avg=85.24ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (538187) PRIOMQTT_S3: PUB | seq=2500 (carga 5 Hz)[0m
+[0;32mI (538197) PRIOMQTT_S3: --- STATS S3 | pub=2476 miss=49 (2.0%) rtt_avg=85.36ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (548187) PRIOMQTT_S3: PUB | seq=2550 (carga 5 Hz)[0m
+[0;32mI (548197) PRIOMQTT_S3: --- STATS S3 | pub=2526 miss=51 (2.0%) rtt_avg=85.58ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (558187) PRIOMQTT_S3: PUB | seq=2600 (carga 5 Hz)[0m
+[0;32mI (558197) PRIOMQTT_S3: --- STATS S3 | pub=2576 miss=54 (2.1%) rtt_avg=85.57ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (568187) PRIOMQTT_S3: PUB | seq=2650 (carga 5 Hz)[0m
+[0;32mI (568197) PRIOMQTT_S3: --- STATS S3 | pub=2626 miss=54 (2.1%) rtt_avg=85.56ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (578187) PRIOMQTT_S3: PUB | seq=2700 (carga 5 Hz)[0m
+[0;32mI (578197) PRIOMQTT_S3: --- STATS S3 | pub=2676 miss=55 (2.1%) rtt_avg=85.62ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (588187) PRIOMQTT_S3: PUB | seq=2750 (carga 5 Hz)[0m
+[0;32mI (588197) PRIOMQTT_S3: --- STATS S3 | pub=2726 miss=56 (2.1%) rtt_avg=85.54ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (598187) PRIOMQTT_S3: PUB | seq=2800 (carga 5 Hz)[0m
+[0;32mI (598197) PRIOMQTT_S3: --- STATS S3 | pub=2776 miss=57 (2.1%) rtt_avg=85.52ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (608187) PRIOMQTT_S3: PUB | seq=2850 (carga 5 Hz)[0m
+[0;32mI (608197) PRIOMQTT_S3: --- STATS S3 | pub=2826 miss=58 (2.1%) rtt_avg=85.65ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (618187) PRIOMQTT_S3: PUB | seq=2900 (carga 5 Hz)[0m
+[0;32mI (618197) PRIOMQTT_S3: --- STATS S3 | pub=2875 miss=59 (2.1%) rtt_avg=85.55ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (628187) PRIOMQTT_S3: PUB | seq=2950 (carga 5 Hz)[0m
+[0;32mI (628197) PRIOMQTT_S3: --- STATS S3 | pub=2926 miss=59 (2.0%) rtt_avg=85.67ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (638187) PRIOMQTT_S3: PUB | seq=3000 (carga 5 Hz)[0m
+[0;32mI (638197) PRIOMQTT_S3: --- STATS S3 | pub=2976 miss=62 (2.1%) rtt_avg=85.69ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (648187) PRIOMQTT_S3: PUB | seq=3050 (carga 5 Hz)[0m
+[0;32mI (648197) PRIOMQTT_S3: --- STATS S3 | pub=3026 miss=62 (2.0%) rtt_avg=85.39ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (658187) PRIOMQTT_S3: PUB | seq=3100 (carga 5 Hz)[0m
+[0;32mI (658197) PRIOMQTT_S3: --- STATS S3 | pub=3076 miss=64 (2.1%) rtt_avg=85.49ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (668187) PRIOMQTT_S3: PUB | seq=3150 (carga 5 Hz)[0m
+[0;32mI (668197) PRIOMQTT_S3: --- STATS S3 | pub=3126 miss=65 (2.1%) rtt_avg=85.56ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (678187) PRIOMQTT_S3: PUB | seq=3200 (carga 5 Hz)[0m
+[0;32mI (678197) PRIOMQTT_S3: --- STATS S3 | pub=3176 miss=66 (2.1%) rtt_avg=85.65ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (688187) PRIOMQTT_S3: PUB | seq=3250 (carga 5 Hz)[0m
+[0;32mI (688197) PRIOMQTT_S3: --- STATS S3 | pub=3226 miss=68 (2.1%) rtt_avg=85.59ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (698187) PRIOMQTT_S3: PUB | seq=3300 (carga 5 Hz)[0m
+[0;32mI (698197) PRIOMQTT_S3: --- STATS S3 | pub=3276 miss=68 (2.1%) rtt_avg=85.37ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (708187) PRIOMQTT_S3: PUB | seq=3350 (carga 5 Hz)[0m
+[0;32mI (708197) PRIOMQTT_S3: --- STATS S3 | pub=3326 miss=68 (2.0%) rtt_avg=85.31ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (718187) PRIOMQTT_S3: PUB | seq=3400 (carga 5 Hz)[0m
+[0;32mI (718197) PRIOMQTT_S3: --- STATS S3 | pub=3376 miss=70 (2.1%) rtt_avg=85.36ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (728187) PRIOMQTT_S3: PUB | seq=3450 (carga 5 Hz)[0m
+[0;32mI (728197) PRIOMQTT_S3: --- STATS S3 | pub=3426 miss=70 (2.0%) rtt_avg=85.24ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (738187) PRIOMQTT_S3: PUB | seq=3500 (carga 5 Hz)[0m
+[0;32mI (738197) PRIOMQTT_S3: --- STATS S3 | pub=3476 miss=72 (2.1%) rtt_avg=85.38ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (748187) PRIOMQTT_S3: PUB | seq=3550 (carga 5 Hz)[0m
+[0;32mI (748197) PRIOMQTT_S3: --- STATS S3 | pub=3526 miss=72 (2.0%) rtt_avg=85.27ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;32mI (758187) PRIOMQTT_S3: PUB | seq=3600 (carga 5 Hz)[0m
+[0;32mI (758197) PRIOMQTT_S3: --- STATS S3 | pub=3576 miss=73 (2.0%) rtt_avg=85.19ms rtt_max=213.09ms taxa=5Hz ---[0m
+[0;31mE (762007) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (762017) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (762017) PRIOMQTT_S3: Erro MQTT.[0m
+[0;31mE (762027) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (762037) PRIOMQTT_S3: Desconectado do broker MQTT.[0m

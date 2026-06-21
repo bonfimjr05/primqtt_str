@@ -1,14 +1,14 @@
 /*
- * PrioMQTT : No S2 (publicador, alta prioridade)
- * Multiplos ESP32 no Modo 1 (TCP)
+ * PrioMQTT: No S3 (gerador de carga de fundo)
+ * Etapa 3: Multiplos ESP32 no Modo 1 (TCP)
  * Disciplina: Sistemas de Tempo Real — UFBA
  *
- *
- * Publica 1 mensagem por segundo no topico sensor/s2,
- * subscreve cmd/s2 para receber o echo reply do controlador
- * e calcula o RTT usando seu proprio clock (esp_timer_get_time).
- *
- * Deadline configurado: 50 ms.
+ * Diferenca em relacao ao firmware de S1/S2:
+ *   - Periodo de publicacao configuravel via LOAD_RATE_HZ
+ *   - Representa trafego de baixa prioridade / nao critico
+ *   - Usado para estressar a fila do broker e observar o
+ *     impacto sobre o RTT de S1 e S2
+ * LOAD_RATE_HZ para 5, 10 e 20.
  */
 
 #include <stdio.h>
@@ -25,29 +25,36 @@
 #include "esp_timer.h"
 
 /* -------------------------------------------------------
- * Configuracoes
+ * Configuracoes 
  * ------------------------------------------------------- */
 #define WIFI_SSID        ".:Bahiatelecom:. Ray"              ///< SSID
 #define WIFI_PASSWORD    "BF81505179"           ///< Senha
 #define BROKER_IP        "192.168.1.24"//"10.141.135.69" ///IP DO PC
 #define BROKER_PORT      1883
-#define TOPIC_PUB        "sensor/s2"
-#define TOPIC_CMD        "cmd/s2"
-#define NODE_ID          "s2"
-#define PUB_PERIOD_MS    1000
-#define DEADLINE_US      50000   /* 50 ms em microssegundos */
+#define TOPIC_PUB        "sensor/s3"
+#define TOPIC_CMD        "cmd/s3"
+#define NODE_ID          "s3"
 
-static const char *TAG = "PRIOMQTT_S2";
+/*
+ * Taxa de carga de fundo em Hz.
+ * Altere este valor para 5, 10 ou 20 entre as execucoes
+ * do experimento, conforme a condicao de carga avaliada.
+ */
+#define LOAD_RATE_HZ     5
+#define PUB_PERIOD_MS    (1000 / LOAD_RATE_HZ)
 
-/* -------------------------------------------------------
- * Event group para sincronizacao Wi-Fi e MQTT
- * ------------------------------------------------------- */
+/*
+ * S3 e trafego de baixa prioridade: deadline mais alto 200 ms 
+ */
+#define DEADLINE_US      200000
+
+static const char *TAG = "PRIOMQTT_S3";
+
 static EventGroupHandle_t s_event_group;
 #define WIFI_CONNECTED_BIT  BIT0
 #define MQTT_CONNECTED_BIT  BIT1
 
 static esp_mqtt_client_handle_t mqtt_client = NULL;
-
 static volatile int64_t ts_ultimo_pub = 0;
 
 static uint32_t total_pub   = 0;
@@ -56,20 +63,18 @@ static int64_t  rtt_soma_us = 0;
 static int64_t  rtt_max_us  = 0;
 
 /* -------------------------------------------------------
- * Handlers de eventos Wi-Fi
+ * Wi-Fi
  * ------------------------------------------------------- */
 static void wifi_event_handler(void *arg, esp_event_base_t base,
                                int32_t event_id, void *event_data)
 {
     if (base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
-
     } else if (base == WIFI_EVENT &&
                event_id == WIFI_EVENT_STA_DISCONNECTED) {
         ESP_LOGW(TAG, "Wi-Fi desconectado. Reconectando...");
         xEventGroupClearBits(s_event_group, WIFI_CONNECTED_BIT);
         esp_wifi_connect();
-
     } else if (base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *ev = (ip_event_got_ip_t *) event_data;
         ESP_LOGI(TAG, "IP obtido: " IPSTR, IP2STR(&ev->ip_info.ip));
@@ -110,7 +115,7 @@ static void wifi_init(void)
 }
 
 /* -------------------------------------------------------
- * Handler de eventos MQTT
+ * MQTT
  * ------------------------------------------------------- */
 static void mqtt_event_handler(void *arg, esp_event_base_t base,
                                int32_t event_id, void *event_data)
@@ -141,23 +146,11 @@ static void mqtt_event_handler(void *arg, esp_event_base_t base,
             rtt_soma_us += rtt_us;
             if (rtt_us > rtt_max_us) rtt_max_us = rtt_us;
 
-            char topico[64] = {0};
-            int  tlen = event->topic_len < 63 ? event->topic_len : 63;
-            memcpy(topico, event->topic, tlen);
-
             if (rtt_us > DEADLINE_US) {
                 total_miss++;
-                ESP_LOGW(TAG,
-                    "MISS | topic=%s rtt=%lld us (%.1f ms) "
-                    "misses=%lu/%lu",
-                    topico, (long long) rtt_us, rtt_us / 1000.0f,
-                    (unsigned long) total_miss,
-                    (unsigned long) total_pub);
-            } else {
-                ESP_LOGI(TAG,
-                    "RTT  | topic=%s rtt=%lld us (%.1f ms)",
-                    topico, (long long) rtt_us, rtt_us / 1000.0f);
             }
+
+            ESP_LOGD(TAG, "RTT = %lld us", (long long) rtt_us);
         }
         break;
 
@@ -189,12 +182,17 @@ static void mqtt_init(void)
 }
 
 /* -------------------------------------------------------
- * Tarefa de publicacao periodica: prioridade FreeRTOS 5
+ * Tarefa de publicacao, carga de fundo
+ *
+ * Prioridade FreeRTOS 3 (mais baixa que S1/S2, que usam 5).
  * ------------------------------------------------------- */
 static void pub_task(void *pvParameters)
 {
     char     payload[192];
     uint32_t seq = 0;
+
+    ESP_LOGI(TAG, "Taxa de carga configurada: %d Hz (periodo %d ms)",
+             LOAD_RATE_HZ, PUB_PERIOD_MS);
 
     while (1) {
         xEventGroupWaitBits(s_event_group, MQTT_CONNECTED_BIT,
@@ -207,20 +205,24 @@ static void pub_task(void *pvParameters)
                  "\"node\":\"%s\","
                  "\"seq\":%lu,"
                  "\"ts\":%lld,"
-                 "\"p\":2"
+                 "\"p\":5"
                  "}",
-                 NODE_ID, (unsigned long) seq,
+                 NODE_ID,
+                 (unsigned long) seq,
                  (long long) ts_ultimo_pub);
 
         int msg_id = esp_mqtt_client_publish(
             mqtt_client, TOPIC_PUB, payload, 0, 0, 0);
 
-        if (msg_id >= 0) {
-            ESP_LOGI(TAG, "PUB | seq=%lu ts=%lld us",
-                     (unsigned long) seq, (long long) ts_ultimo_pub);
-        } else {
+        if (msg_id < 0) {
             ESP_LOGE(TAG, "Falha ao publicar seq=%lu",
                      (unsigned long) seq);
+        }
+
+        
+        if (seq % 50 == 0) {
+            ESP_LOGI(TAG, "PUB | seq=%lu (carga %d Hz)",
+                     (unsigned long) seq, LOAD_RATE_HZ);
         }
 
         seq++;
@@ -237,10 +239,11 @@ static void stats_task(void *pvParameters)
             float max_ms   = rtt_max_us / 1000.0f;
             float miss_pct = (total_miss * 100.0f) / total_pub;
             ESP_LOGI(TAG,
-                "--- STATS S2 | pub=%lu miss=%lu (%.1f%%) "
-                "rtt_avg=%.2fms rtt_max=%.2fms ---",
-                (unsigned long) total_pub, (unsigned long) total_miss,
-                miss_pct, avg_ms, max_ms);
+                "--- STATS S3 | pub=%lu miss=%lu (%.1f%%) "
+                "rtt_avg=%.2fms rtt_max=%.2fms taxa=%dHz ---",
+                (unsigned long) total_pub,
+                (unsigned long) total_miss,
+                miss_pct, avg_ms, max_ms, LOAD_RATE_HZ);
         }
     }
 }
@@ -255,15 +258,14 @@ void app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    ESP_LOGI(TAG, "=== PrioMQTT Publisher | node=%s ===", NODE_ID);
+    ESP_LOGI(TAG, "=== PrioMQTT S3 (carga de fundo) ===");
     ESP_LOGI(TAG, "Broker: %s:%d", BROKER_IP, BROKER_PORT);
-    ESP_LOGI(TAG, "Topico pub: %s | cmd: %s", TOPIC_PUB, TOPIC_CMD);
-    ESP_LOGI(TAG, "Deadline: %d us (%d ms)",
-             DEADLINE_US, DEADLINE_US / 1000);
+    ESP_LOGI(TAG, "Taxa: %d Hz", LOAD_RATE_HZ);
 
     wifi_init();
     mqtt_init();
 
-    xTaskCreate(pub_task,   "pub_task_s2",   4096, NULL, 5, NULL);
-    xTaskCreate(stats_task, "stats_task_s2", 2048, NULL, 2, NULL);
+    /* Prioridade FreeRTOS 3 — menor que S1/S2 (prio 5) */
+    xTaskCreate(pub_task,   "pub_task_s3",   4096, NULL, 3, NULL);
+    xTaskCreate(stats_task, "stats_task_s3", 2048, NULL, 1, NULL);
 }

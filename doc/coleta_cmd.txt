@@ -1,0 +1,8 @@
+# Terminal 1 - S1
+idf.py -p /dev/ttyUSBX monitor | tee log_s1_carga5hz.txt
+
+# Terminal 2 - S2
+idf.py -p /dev/ttyUSBX monitor | tee log_s2_carga5hz.txt
+
+# Terminal 3 - S3
+idf.py -p /dev/ttyUSBX monitor | tee log_s3_carga5hz.txt

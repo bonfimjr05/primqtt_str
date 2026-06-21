@@ -1,0 +1,348 @@
+Executing action: monitor
+Running idf_monitor in directory /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s1
+Executing "/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python /home/paulo/esp/v5.1.5/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB2 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/paulo/trabalho_prioMQTT/primqtt_str/firmware/publisher_s1/build/publisher_s1.elf -m '/home/paulo/.espressif/python_env/idf5.1_py3.12_env/bin/python' '/home/paulo/esp/v5.1.5/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB2'"...
+ets Jul 29 2019 12:21:46
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jun 17 2026 23:17:06[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24860h (149600) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00034888 vaddr=3ffb0000 size=03bfch ( 15356) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003848c vaddr=40080000 size=07b8ch ( 31628) load[0m
+[0;32mI (181) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9ba68h (637544) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000dba90 vaddr=40087b8c size=0eb94h ( 60308) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu up.[0m
+[0;32mI (460) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (478) cpu_start: Pro cpu start user code[0m
+[0;32mI (478) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (478) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     publisher_s3[0m
+[0;32mI (488) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Jun 17 2026 23:16:53[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  531cea46dcb8d7a0...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (511) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;32mI (573) app_start: Starting scheduler on CPU0[0m
+[0;32mI (577) app_start: Starting scheduler on CPU1[0m
+[0;32mI (577) main_task: Started on CPU0[0m
+[0;32mI (587) main_task: Calling app_main()[0m
+[0;32mI (607) PRIOMQTT_S3: === PrioMQTT S3 (carga de fundo) ===[0m
+[0;32mI (607) PRIOMQTT_S3: Broker: 10.141.135.69:1883[0m
+[0;32mI (607) PRIOMQTT_S3: Taxa: 5 Hz[0m
+[0;32mI (627) wifi:wifi driver task: 3ffc02f4, prio:23, stack:6656, core=0[0m
+[0;32mI (637) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (637) wifi:wifi certification version: v7.0[0m
+[0;32mI (637) wifi:config NVS flash: enabled[0m
+[0;32mI (637) wifi:config nano formating: disabled[0m
+[0;32mI (637) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (647) wifi:Init management short buffer num: 32[0m
+[0;32mI (657) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (657) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (667) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5760[0m
+[0;32mI (687) wifi_init: tcp rx win: 5760[0m
+[0;32mI (697) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (707) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (707) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (717) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (64) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (64) boot: compile time Jun 17 2026 23:17:06[0m
+[0;32mI (64) boot: Multicore bootloader[0m
+[0;32mI (69) boot: chip revision: v3.0[0m
+[0;32mI (73) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (78) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (82) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (87) boot: Enabling RNG early entropy source...[0m
+[0;32mI (92) boot: Partition Table:[0m
+[0;32mI (96) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (103) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (111) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (118) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (126) boot: End of partition table[0m
+[0;32mI (130) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24860h (149600) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=00034888 vaddr=3ffb0000 size=03bfch ( 15356) load[0m
+[0;32mI (199) esp_image: segment 2: paddr=0003848c vaddr=40080000 size=07b8ch ( 31628) load[0m
+[0;32mI (212) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9ba68h (637544) map[0m
+[0;32mI (443) esp_image: segment 4: paddr=000dba90 vaddr=40087b8c size=0eb94h ( 60308) load[0m
+[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (480) boot: Disabling RNG early entropy source...[0m
+[0;32mI (491) cpu_start: Multicore app[0m
+[0;32mI (492) cpu_start: Pro cpu up.[0m
+[0;32mI (492) cpu_start: Starting app cpu, entry point is 0x400813a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (509) cpu_start: Pro cpu start user code[0m
+[0;32mI (509) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (509) cpu_start: Application information:[0m
+[0;32mI (514) cpu_start: Project name:     publisher_s3[0m
+[0;32mI (519) cpu_start: App version:      e1e7972-dirty[0m
+[0;32mI (525) cpu_start: Compile time:     Jun 17 2026 23:16:53[0m
+[0;32mI (531) cpu_start: ELF file SHA256:  531cea46dcb8d7a0...[0m
+[0;32mI (537) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (542) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (547) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (552) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (557) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (564) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (576) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (582) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (589) heap_init: At 40096720 len 000098E0 (38 KiB): IRAM[0m
+[0;32mI (597) spi_flash: detected chip: generic[0m
+[0;32mI (600) spi_flash: flash io: dio[0m
+[0;32mI (605) app_start: Starting scheduler on CPU0[0m
+[0;32mI (609) app_start: Starting scheduler on CPU1[0m
+[0;32mI (609) main_task: Started on CPU0[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+[0;32mI (639) PRIOMQTT_S3: === PrioMQTT S3 (carga de fundo) ===[0m
+[0;32mI (639) PRIOMQTT_S3: Broker: 10.141.135.69:1883[0m
+[0;32mI (639) PRIOMQTT_S3: Taxa: 5 Hz[0m
+[0;32mI (659) wifi:wifi driver task: 3ffc02f4, prio:23, stack:6656, core=0[0m
+[0;32mI (669) wifi:wifi firmware version: bbd58fc31[0m
+[0;32mI (669) wifi:wifi certification version: v7.0[0m
+[0;32mI (669) wifi:config NVS flash: enabled[0m
+[0;32mI (669) wifi:config nano formating: disabled[0m
+[0;32mI (669) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (679) wifi:Init management short buffer num: 32[0m
+[0;32mI (689) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (689) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (699) wifi:Init static rx buffer num: 10[0m
+[0;32mI (699) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (699) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (709) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (719) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (739) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (749) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (839) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (909) wifi:mode : sta (0c:8b:95:32:7a:24)[0m
+[0;32mI (909) wifi:enable tsf[0m
+[0;32mI (919) PRIOMQTT_S3: Aguardando conexao Wi-Fi...[0m
+[0;32mI (1649) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (1659) wifi:state: init -> auth (b0)[0m
+[0;32mI (1669) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1719) wifi:state: assoc -> run (10)[0m
+[0;32mI (1759) wifi:connected with teste, aid = 3, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (1759) wifi:security: WPA2-PSK, phy: bgn, rssi: -47[0m
+[0;32mI (1769) wifi:pm start, type: 1[0m
+
+[0;32mI (1769) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1789) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1859) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1859) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2779) esp_netif_handlers: sta ip: 10.141.135.252, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (2779) PRIOMQTT_S3: IP obtido: 10.141.135.252[0m
+[0;32mI (2779) PRIOMQTT_S3: Wi-Fi conectado.[0m
+[0;32mI (2789) PRIOMQTT_S3: Aguardando conexao MQTT...[0m
+[0;31mE (12799) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (12799) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12799) mqtt_client: Error transport connect[0m
+[0;31mE (12799) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (12809) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;31mE (37819) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (37819) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (37819) mqtt_client: Error transport connect[0m
+[0;31mE (37819) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (37829) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (47239) wifi:state: run -> init (1a0)[0m
+[0;32mI (47249) wifi:pm stop, total sleep time: 38295508 us / 45472363 us[0m
+
+[0;32mI (47249) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (47249) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (47249) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (47269) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (47269) wifi:state: init -> auth (b0)[0m
+[0;32mI (47279) wifi:state: auth -> assoc (0)[0m
+[0;32mI (47319) wifi:state: assoc -> run (10)[0m
+[0;32mI (47459) wifi:state: run -> init (3a0)[0m
+[0;32mI (47469) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (47469) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (49879) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (52299) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;31mE (52829) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (52829) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (52829) mqtt_client: Error transport connect[0m
+[0;31mE (52839) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (52839) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;33mW (54719) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (54729) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (54729) wifi:state: init -> auth (b0)[0m
+[0;32mI (54739) wifi:state: auth -> assoc (0)[0m
+[0;32mI (54779) wifi:state: assoc -> run (10)[0m
+[0;32mI (54809) wifi:connected with teste, aid = 1, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (54809) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (54809) wifi:pm start, type: 1[0m
+
+[0;32mI (54809) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (54859) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:0, winSize:64[0m
+[0;32mI (54899) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (54899) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (55819) esp_netif_handlers: sta ip: 10.141.135.252, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (55819) PRIOMQTT_S3: IP obtido: 10.141.135.252[0m
+[0;32mI (62929) PRIOMQTT_S3: Conectado ao broker MQTT.[0m
+[0;32mI (62929) PRIOMQTT_S3: Subscrito em cmd/s3[0m
+[0;32mI (62929) PRIOMQTT_S3: Taxa de carga configurada: 5 Hz (periodo 200 ms)[0m
+[0;32mI (62939) PRIOMQTT_S3: PUB | seq=0 (carga 5 Hz)[0m
+[0;32mI (62939) main_task: Returned from app_main()[0m
+[0;32mI (72939) PRIOMQTT_S3: PUB | seq=50 (carga 5 Hz)[0m
+[0;32mI (72939) PRIOMQTT_S3: --- STATS S3 | pub=49 miss=0 (0.0%) rtt_avg=45.92ms rtt_max=171.43ms taxa=5Hz ---[0m
+[0;32mI (82939) PRIOMQTT_S3: PUB | seq=100 (carga 5 Hz)[0m
+[0;32mI (82939) PRIOMQTT_S3: --- STATS S3 | pub=100 miss=0 (0.0%) rtt_avg=49.89ms rtt_max=175.73ms taxa=5Hz ---[0m
+[0;32mI (92939) PRIOMQTT_S3: PUB | seq=150 (carga 5 Hz)[0m
+[0;32mI (92949) PRIOMQTT_S3: --- STATS S3 | pub=150 miss=0 (0.0%) rtt_avg=53.29ms rtt_max=175.73ms taxa=5Hz ---[0m
+[0;32mI (102939) PRIOMQTT_S3: PUB | seq=200 (carga 5 Hz)[0m
+[0;32mI (102949) PRIOMQTT_S3: --- STATS S3 | pub=200 miss=0 (0.0%) rtt_avg=51.48ms rtt_max=176.47ms taxa=5Hz ---[0m
+[0;32mI (112939) PRIOMQTT_S3: PUB | seq=250 (carga 5 Hz)[0m
+[0;32mI (112949) PRIOMQTT_S3: --- STATS S3 | pub=250 miss=0 (0.0%) rtt_avg=53.17ms rtt_max=181.57ms taxa=5Hz ---[0m
+[0;32mI (122939) PRIOMQTT_S3: PUB | seq=300 (carga 5 Hz)[0m
+[0;32mI (122949) PRIOMQTT_S3: --- STATS S3 | pub=300 miss=0 (0.0%) rtt_avg=52.57ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (123149) wifi:state: run -> init (1a0)[0m
+[0;32mI (123159) wifi:pm stop, total sleep time: 35925510 us / 68343863 us[0m
+
+[0;32mI (123159) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (123159) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (123159) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;31mE (123159) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 54[0m
+[0;31mE (123179) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (123179) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (123189) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;32mI (123189) wifi:state: init -> auth (b0)[0m
+[0;32mI (123279) wifi:state: auth -> assoc (0)[0m
+[0;32mI (123329) wifi:state: assoc -> run (10)[0m
+[0;32mI (123639) wifi:state: run -> init (3a0)[0m
+[0;32mI (123649) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;33mW (123649) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (126059) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (128479) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (130899) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (132949) PRIOMQTT_S3: --- STATS S3 | pub=300 miss=0 (0.0%) rtt_avg=52.57ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;31mE (133199) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (133199) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (133199) mqtt_client: Error transport connect[0m
+[0;31mE (133209) PRIOMQTT_S3: Erro MQTT.[0m
+[0;33mW (133209) PRIOMQTT_S3: Desconectado do broker MQTT.[0m
+[0;33mW (133309) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (135729) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;33mW (138139) PRIOMQTT_S3: Wi-Fi desconectado. Reconectando...[0m
+[0;32mI (138159) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (138159) wifi:state: init -> auth (b0)[0m
+[0;32mI (138179) wifi:state: auth -> assoc (0)[0m
+[0;32mI (138259) wifi:state: assoc -> run (10)[0m
+[0;32mI (138289) wifi:connected with teste, aid = 4, channel 6, BW20, bssid = 46:76:8f:f8:c3:8c[0m
+[0;32mI (138289) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (138289) wifi:pm start, type: 1[0m
+
+[0;32mI (138289) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (138329) wifi:<ba-add>idx:0 (ifx:0, 46:76:8f:f8:c3:8c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (138359) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (138359) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (139299) esp_netif_handlers: sta ip: 10.141.135.252, mask: 255.255.255.0, gw: 10.141.135.216[0m
+[0;32mI (139299) PRIOMQTT_S3: IP obtido: 10.141.135.252[0m
+[0;32mI (142949) PRIOMQTT_S3: --- STATS S3 | pub=300 miss=0 (0.0%) rtt_avg=52.57ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (143419) PRIOMQTT_S3: Conectado ao broker MQTT.[0m
+[0;32mI (143419) PRIOMQTT_S3: Subscrito em cmd/s3[0m
+[0;32mI (152949) PRIOMQTT_S3: --- STATS S3 | pub=344 miss=0 (0.0%) rtt_avg=52.51ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (153019) PRIOMQTT_S3: PUB | seq=350 (carga 5 Hz)[0m
+[0;32mI (162949) PRIOMQTT_S3: --- STATS S3 | pub=394 miss=0 (0.0%) rtt_avg=52.24ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (163019) PRIOMQTT_S3: PUB | seq=400 (carga 5 Hz)[0m
+[0;32mI (172949) PRIOMQTT_S3: --- STATS S3 | pub=444 miss=0 (0.0%) rtt_avg=53.00ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (173019) PRIOMQTT_S3: PUB | seq=450 (carga 5 Hz)[0m
+[0;32mI (182949) PRIOMQTT_S3: --- STATS S3 | pub=494 miss=0 (0.0%) rtt_avg=52.38ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (183019) PRIOMQTT_S3: PUB | seq=500 (carga 5 Hz)[0m
+[0;32mI (192949) PRIOMQTT_S3: --- STATS S3 | pub=544 miss=0 (0.0%) rtt_avg=51.04ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (193019) PRIOMQTT_S3: PUB | seq=550 (carga 5 Hz)[0m
+[0;32mI (202949) PRIOMQTT_S3: --- STATS S3 | pub=594 miss=0 (0.0%) rtt_avg=50.86ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (203019) PRIOMQTT_S3: PUB | seq=600 (carga 5 Hz)[0m
+[0;32mI (212949) PRIOMQTT_S3: --- STATS S3 | pub=645 miss=0 (0.0%) rtt_avg=50.34ms rtt_max=195.89ms taxa=5Hz ---[0m
+[0;32mI (213029) PRIOMQTT_S3: PUB | seq=650 (carga 5 Hz)[0m
+[0;32mI (222949) PRIOMQTT_S3: --- STATS S3 | pub=694 miss=2 (0.3%) rtt_avg=50.35ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (223039) PRIOMQTT_S3: PUB | seq=700 (carga 5 Hz)[0m
+[0;32mI (232949) PRIOMQTT_S3: --- STATS S3 | pub=745 miss=2 (0.3%) rtt_avg=50.74ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (233039) PRIOMQTT_S3: PUB | seq=750 (carga 5 Hz)[0m
+[0;32mI (242949) PRIOMQTT_S3: --- STATS S3 | pub=794 miss=2 (0.3%) rtt_avg=50.77ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (243039) PRIOMQTT_S3: PUB | seq=800 (carga 5 Hz)[0m
+[0;32mI (252949) PRIOMQTT_S3: --- STATS S3 | pub=844 miss=2 (0.2%) rtt_avg=51.16ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (253039) PRIOMQTT_S3: PUB | seq=850 (carga 5 Hz)[0m
+[0;32mI (262949) PRIOMQTT_S3: --- STATS S3 | pub=894 miss=2 (0.2%) rtt_avg=51.88ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (263039) PRIOMQTT_S3: PUB | seq=900 (carga 5 Hz)[0m
+[0;32mI (272949) PRIOMQTT_S3: --- STATS S3 | pub=944 miss=2 (0.2%) rtt_avg=52.59ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (273039) PRIOMQTT_S3: PUB | seq=950 (carga 5 Hz)[0m
+[0;32mI (282949) PRIOMQTT_S3: --- STATS S3 | pub=994 miss=3 (0.3%) rtt_avg=52.83ms rtt_max=203.26ms taxa=5Hz ---[0m
+[0;32mI (283039) PRIOMQTT_S3: PUB | seq=1000 (carga 5 Hz)[0m
+[0;32mI (292949) PRIOMQTT_S3: --- STATS S3 | pub=1045 miss=5 (0.5%) rtt_avg=53.73ms rtt_max=203.91ms taxa=5Hz ---[0m
+[0;32mI (293049) PRIOMQTT_S3: PUB | seq=1050 (carga 5 Hz)[0m
+[0;32mI (302949) PRIOMQTT_S3: --- STATS S3 | pub=1095 miss=5 (0.5%) rtt_avg=53.80ms rtt_max=203.91ms taxa=5Hz ---[0m
+[0;32mI (303049) PRIOMQTT_S3: PUB | seq=1100 (carga 5 Hz)[0m
+[0;32mI (312949) PRIOMQTT_S3: --- STATS S3 | pub=1144 miss=5 (0.4%) rtt_avg=53.51ms rtt_max=203.91ms taxa=5Hz ---[0m
+[0;32mI (313049) PRIOMQTT_S3: PUB | seq=1150 (carga 5 Hz)[0m
+[0;32mI (322949) PRIOMQTT_S3: --- STATS S3 | pub=1194 miss=5 (0.4%) rtt_avg=53.37ms rtt_max=203.91ms taxa=5Hz ---[0m
+[0;32mI (323049) PRIOMQTT_S3: PUB | seq=1200 (carga 5 Hz)[0m
+[0;32mI (332949) PRIOMQTT_S3: --- STATS S3 | pub=1244 miss=5 (0.4%) rtt_avg=53.32ms rtt_max=203.91ms taxa=5Hz ---[0m
+[0;32mI (333049) PRIOMQTT_S3: PUB | seq=1250 (carga 5 Hz)[0m
+[0;32mI (342949) PRIOMQTT_S3: --- STATS S3 | pub=1294 miss=6 (0.5%) rtt_avg=53.33ms rtt_max=204.73ms taxa=5Hz ---[0m
+[0;32mI (343049) PRIOMQTT_S3: PUB | seq=1300 (carga 5 Hz)[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
